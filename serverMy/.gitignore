@@ -1,0 +1,77 @@
+# Compiled object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Executables
+*.exe
+*.out
+*.app
+server
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# Log files
+*.log
+server.log
+debug.log
+
+# Temporary files
+*~
+*.swp
+*.swo
+*.swn
+
+# IDE files
+.vscode/
+.idea/
+*.workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build directories
+build/
+Binaries/
+
+# Coverage reports
+*.gcda
+*.gcno
+*.gcov
+
+# Profiling data
+*.profraw
+*.profdata
+
+# Dependencies
+.deps/
+*.d
