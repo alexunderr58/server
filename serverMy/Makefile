@@ -1,19 +1,71 @@
+# Компилятор и флаги
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Wextra -O2
-LDFLAGS = -lssl -lcrypto
-TARGET = server
-SOURCES = main.cpp server.cpp clientdb.cpp authenticator.cpp vectorprocessor.cpp logger.cpp
+CXXFLAGS = -std=c++17 -Wall -Wextra -pedantic -O2
+INCLUDES = -I./include -I/usr/include/openssl
+LDFLAGS = -lssl -lcrypto -lpthread
 
-$(TARGET): $(SOURCES)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCES) $(LDFLAGS)
+# Директории
+SRCDIR = src
+OBJDIR = obj
+BINDIR = bin
+INCLUDEDIR = include
 
-.PHONY: clean install
+# Исходные файлы
+SOURCES = $(wildcard $(SRCDIR)/*.cpp)
+OBJECTS = $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SOURCES))
+EXECUTABLE = $(BINDIR)/vcalc_server
 
+# Основная цель
+all: $(EXECUTABLE)
+
+# Создание исполняемого файла
+$(EXECUTABLE): $(OBJECTS)
+	@mkdir -p $(BINDIR)
+	$(CXX) $(OBJECTS) -o $@ $(LDFLAGS)
+
+# Компиляция объектных файлов
+$(OBJDIR)/%.o: $(SRCDIR)/%.cpp
+	@mkdir -p $(OBJDIR)
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+
+# Очистка
 clean:
-	rm -f $(TARGET)
+	rm -rf $(OBJDIR) $(BINDIR)
 
-install: $(TARGET)
-	cp $(TARGET) /usr/local/bin/
-	mkdir -p /etc /var/log
-	touch /etc/vcalc.conf /var/log/vcalc.log
-	chmod 644 /etc/vcalc.conf /var/log/vcalc.log
+# Установка (требует прав root)
+install: $(EXECUTABLE)
+	cp $(EXECUTABLE) /usr/local/bin/vcalc_server
+	@echo "Сервер установлен в /usr/local/bin/vcalc_server"
+	@echo "Не забудьте создать конфигурационные файлы:"
+	@echo "  sudo mkdir -p /etc"
+	@echo "  echo 'user:P@ssW0rd' | sudo tee /etc/vcalc.conf"
+	@echo "  sudo mkdir -p /var/log"
+
+# Создание пакета для распространения
+dist: clean
+	mkdir -p dist/vcalc_server
+	cp -r include src Makefile README.md data dist/vcalc_server/
+	tar -czf vcalc_server.tar.gz -C dist .
+	rm -rf dist
+
+# Запуск тестового сервера (локально)
+run: $(EXECUTABLE)
+	./$(EXECUTABLE) -c ./data/clients.conf -l ./logs/vcalc.log -p 33333
+
+# Отладочная сборка
+debug: CXXFLAGS += -g -DDEBUG
+debug: clean $(EXECUTABLE)
+
+# Статический анализ
+check:
+	cppcheck --enable=all --suppress=missingIncludeSystem $(SRCDIR) $(INCLUDEDIR)
+
+# Зависимости для каждого объектного файла
+$(OBJDIR)/main.o: $(INCLUDEDIR)/Server.h $(INCLUDEDIR)/Config.h
+$(OBJDIR)/Server.o: $(INCLUDEDIR)/Server.h $(INCLUDEDIR)/Logger.h $(INCLUDEDIR)/ClientDB.h $(INCLUDEDIR)/Protocol.h $(INCLUDEDIR)/VectorProcessor.h $(INCLUDEDIR)/Config.h
+$(OBJDIR)/ClientDB.o: $(INCLUDEDIR)/ClientDB.h $(INCLUDEDIR)/Config.h
+$(OBJDIR)/Logger.o: $(INCLUDEDIR)/Logger.h
+$(OBJDIR)/Protocol.o: $(INCLUDEDIR)/Protocol.h $(INCLUDEDIR)/Config.h
+$(OBJDIR)/VectorProcessor.o: $(INCLUDEDIR)/VectorProcessor.h
+
+.PHONY: all clean install dist run debug check
