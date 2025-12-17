@@ -1,0 +1,635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vector Calculator Server: Класс Protocol</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Vector Calculator Server<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pri-static-attribs">Закрытые статические данные</a> &#124;
+<a href="classProtocol-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Protocol</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс для работы с сетевым протоколом  
+ <a href="classProtocol.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Protocol_8h_source.html">Protocol.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a110db93280f9931c66f3930079afa10f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtocol.html#a110db93280f9931c66f3930079afa10f">sendSalt</a> (int clientSocket, const std::string &amp;salt)</td></tr>
+<tr class="memdesc:a110db93280f9931c66f3930079afa10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка соли клиенту  <a href="classProtocol.html#a110db93280f9931c66f3930079afa10f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a110db93280f9931c66f3930079afa10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4202284089fac0cee1a1d85d7f43dbad"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtocol.html#a4202284089fac0cee1a1d85d7f43dbad">sendError</a> (int clientSocket)</td></tr>
+<tr class="memdesc:a4202284089fac0cee1a1d85d7f43dbad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка сообщения об ошибке  <a href="classProtocol.html#a4202284089fac0cee1a1d85d7f43dbad">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4202284089fac0cee1a1d85d7f43dbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95a69029c2b16fe76888f6ade75a422e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtocol.html#a95a69029c2b16fe76888f6ade75a422e">sendOk</a> (int clientSocket)</td></tr>
+<tr class="memdesc:a95a69029c2b16fe76888f6ade75a422e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка сообщения об успехе  <a href="classProtocol.html#a95a69029c2b16fe76888f6ade75a422e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a95a69029c2b16fe76888f6ade75a422e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84bd3f4ef6bf81f1a7e70bcb48c49303"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtocol.html#a84bd3f4ef6bf81f1a7e70bcb48c49303">receiveLogin</a> (int clientSocket, std::string &amp;login)</td></tr>
+<tr class="memdesc:a84bd3f4ef6bf81f1a7e70bcb48c49303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение логина от клиента  <a href="classProtocol.html#a84bd3f4ef6bf81f1a7e70bcb48c49303">Подробнее...</a><br /></td></tr>
+<tr class="separator:a84bd3f4ef6bf81f1a7e70bcb48c49303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6e69ecd1938782fdd2d48ea14fef9f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtocol.html#a6c6e69ecd1938782fdd2d48ea14fef9f">receiveHash</a> (int clientSocket, std::string &amp;hash)</td></tr>
+<tr class="memdesc:a6c6e69ecd1938782fdd2d48ea14fef9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение хэша от клиента  <a href="classProtocol.html#a6c6e69ecd1938782fdd2d48ea14fef9f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6c6e69ecd1938782fdd2d48ea14fef9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ff297a96d5fc00e8e54da5213b66d53"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtocol.html#a1ff297a96d5fc00e8e54da5213b66d53">sendVectorResults</a> (int clientSocket, const std::vector&lt; double &gt; &amp;results)</td></tr>
+<tr class="memdesc:a1ff297a96d5fc00e8e54da5213b66d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка результатов вычисления векторов  <a href="classProtocol.html#a1ff297a96d5fc00e8e54da5213b66d53">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1ff297a96d5fc00e8e54da5213b66d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77bde78ae807e2a0b01ca0fbe2ef100d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtocol.html#a77bde78ae807e2a0b01ca0fbe2ef100d">receiveVectorData</a> (int clientSocket, std::vector&lt; uint8_t &gt; &amp;binaryData)</td></tr>
+<tr class="memdesc:a77bde78ae807e2a0b01ca0fbe2ef100d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение векторных данных от клиента  <a href="classProtocol.html#a77bde78ae807e2a0b01ca0fbe2ef100d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a77bde78ae807e2a0b01ca0fbe2ef100d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1383c76d6c950323b4a12967ba7fdc9e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtocol.html#a1383c76d6c950323b4a12967ba7fdc9e">sendAll</a> (int socket, const void *buffer, size_t length)</td></tr>
+<tr class="memdesc:a1383c76d6c950323b4a12967ba7fdc9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка всех данных через сокет  <a href="classProtocol.html#a1383c76d6c950323b4a12967ba7fdc9e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1383c76d6c950323b4a12967ba7fdc9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a062040d7c738be3f95504d340fa48e09"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtocol.html#a062040d7c738be3f95504d340fa48e09">recvAll</a> (int socket, void *buffer, size_t length)</td></tr>
+<tr class="memdesc:a062040d7c738be3f95504d340fa48e09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение всех данных через сокет  <a href="classProtocol.html#a062040d7c738be3f95504d340fa48e09">Подробнее...</a><br /></td></tr>
+<tr class="separator:a062040d7c738be3f95504d340fa48e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6933d119313c311c48603d4f53ce7d6"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtocol.html#ad6933d119313c311c48603d4f53ce7d6">binaryToHex</a> (const std::vector&lt; uint8_t &gt; &amp;data)</td></tr>
+<tr class="memdesc:ad6933d119313c311c48603d4f53ce7d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразование бинарных данных в hex строку  <a href="classProtocol.html#ad6933d119313c311c48603d4f53ce7d6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad6933d119313c311c48603d4f53ce7d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae08bf79c917ae0ca4ae715a0e1dca2b1"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtocol.html#ae08bf79c917ae0ca4ae715a0e1dca2b1">hexToBinary</a> (const std::string &amp;hex)</td></tr>
+<tr class="memdesc:ae08bf79c917ae0ca4ae715a0e1dca2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразование hex строки в бинарные данные  <a href="classProtocol.html#ae08bf79c917ae0ca4ae715a0e1dca2b1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae08bf79c917ae0ca4ae715a0e1dca2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Закрытые статические данные</h2></td></tr>
+<tr class="memitem:ac7b544f05cf71e416169fccbfc4104f1"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtocol.html#ac7b544f05cf71e416169fccbfc4104f1">SEND_RECV_TIMEOUT</a> = 10</td></tr>
+<tr class="memdesc:ac7b544f05cf71e416169fccbfc4104f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таймаут отправки/приема в секундах  <a href="classProtocol.html#ac7b544f05cf71e416169fccbfc4104f1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac7b544f05cf71e416169fccbfc4104f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Класс для работы с сетевым протоколом </p>
+<p >Содержит статические методы для отправки и приема данных по сетевому протоколу векторного калькулятора. </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="ad6933d119313c311c48603d4f53ce7d6" name="ad6933d119313c311c48603d4f53ce7d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6933d119313c311c48603d4f53ce7d6">&#9670;&nbsp;</a></span>binaryToHex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string Protocol::binaryToHex </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; uint8_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Преобразование бинарных данных в hex строку </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Бинарные данные </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Hex строка в верхнем регистре </dd></dl>
+
+</div>
+</div>
+<a id="ae08bf79c917ae0ca4ae715a0e1dca2b1" name="ae08bf79c917ae0ca4ae715a0e1dca2b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae08bf79c917ae0ca4ae715a0e1dca2b1">&#9670;&nbsp;</a></span>hexToBinary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; uint8_t &gt; Protocol::hexToBinary </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>hex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Преобразование hex строки в бинарные данные </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hex</td><td>Hex строка </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Бинарные данные </dd></dl>
+
+</div>
+</div>
+<a id="a6c6e69ecd1938782fdd2d48ea14fef9f" name="a6c6e69ecd1938782fdd2d48ea14fef9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c6e69ecd1938782fdd2d48ea14fef9f">&#9670;&nbsp;</a></span>receiveHash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Protocol::receiveHash </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clientSocket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получение хэша от клиента </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">clientSocket</td><td>Сокет клиента </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">hash</td><td>Полученный хэш </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если хэш успешно получен, false в случае ошибки </dd></dl>
+
+</div>
+</div>
+<a id="a84bd3f4ef6bf81f1a7e70bcb48c49303" name="a84bd3f4ef6bf81f1a7e70bcb48c49303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84bd3f4ef6bf81f1a7e70bcb48c49303">&#9670;&nbsp;</a></span>receiveLogin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Protocol::receiveLogin </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clientSocket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>login</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получение логина от клиента </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">clientSocket</td><td>Сокет клиента </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">login</td><td>Полученный логин </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если логин успешно получен, false в случае ошибки </dd></dl>
+
+</div>
+</div>
+<a id="a77bde78ae807e2a0b01ca0fbe2ef100d" name="a77bde78ae807e2a0b01ca0fbe2ef100d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77bde78ae807e2a0b01ca0fbe2ef100d">&#9670;&nbsp;</a></span>receiveVectorData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Protocol::receiveVectorData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clientSocket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; uint8_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>binaryData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получение векторных данных от клиента </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">clientSocket</td><td>Сокет клиента </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">binaryData</td><td>Полученные бинарные данные </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если данные успешно получены, false в случае ошибки </dd></dl>
+
+</div>
+</div>
+<a id="a062040d7c738be3f95504d340fa48e09" name="a062040d7c738be3f95504d340fa48e09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a062040d7c738be3f95504d340fa48e09">&#9670;&nbsp;</a></span>recvAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Protocol::recvAll </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получение всех данных через сокет </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket</td><td>Сокет для приема </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>Буфер для данных </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Ожидаемая длина данных </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если все данные получены, false в случае ошибки </dd></dl>
+
+</div>
+</div>
+<a id="a1383c76d6c950323b4a12967ba7fdc9e" name="a1383c76d6c950323b4a12967ba7fdc9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1383c76d6c950323b4a12967ba7fdc9e">&#9670;&nbsp;</a></span>sendAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Protocol::sendAll </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отправка всех данных через сокет </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket</td><td>Сокет для отправки </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>Буфер с данными </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Длина данных </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если все данные отправлены, false в случае ошибки </dd></dl>
+
+</div>
+</div>
+<a id="a4202284089fac0cee1a1d85d7f43dbad" name="a4202284089fac0cee1a1d85d7f43dbad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4202284089fac0cee1a1d85d7f43dbad">&#9670;&nbsp;</a></span>sendError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Protocol::sendError </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clientSocket</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отправка сообщения об ошибке </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">clientSocket</td><td>Сокет клиента </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если сообщение успешно отправлено, false в случае ошибки </dd></dl>
+
+</div>
+</div>
+<a id="a95a69029c2b16fe76888f6ade75a422e" name="a95a69029c2b16fe76888f6ade75a422e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95a69029c2b16fe76888f6ade75a422e">&#9670;&nbsp;</a></span>sendOk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Protocol::sendOk </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clientSocket</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отправка сообщения об успехе </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">clientSocket</td><td>Сокет клиента </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если сообщение успешно отправлено, false в случае ошибки </dd></dl>
+
+</div>
+</div>
+<a id="a110db93280f9931c66f3930079afa10f" name="a110db93280f9931c66f3930079afa10f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a110db93280f9931c66f3930079afa10f">&#9670;&nbsp;</a></span>sendSalt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Protocol::sendSalt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clientSocket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>salt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отправка соли клиенту </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">clientSocket</td><td>Сокет клиента </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">salt</td><td>Соль для отправки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если соль успешно отправлена, false в случае ошибки </dd></dl>
+
+</div>
+</div>
+<a id="a1ff297a96d5fc00e8e54da5213b66d53" name="a1ff297a96d5fc00e8e54da5213b66d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ff297a96d5fc00e8e54da5213b66d53">&#9670;&nbsp;</a></span>sendVectorResults()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Protocol::sendVectorResults </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clientSocket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>results</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отправка результатов вычисления векторов </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">clientSocket</td><td>Сокет клиента </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">results</td><td>Результаты вычислений </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если результаты успешно отправлены, false в случае ошибки </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ac7b544f05cf71e416169fccbfc4104f1" name="ac7b544f05cf71e416169fccbfc4104f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7b544f05cf71e416169fccbfc4104f1">&#9670;&nbsp;</a></span>SEND_RECV_TIMEOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Protocol::SEND_RECV_TIMEOUT = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Таймаут отправки/приема в секундах </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>include/<a class="el" href="Protocol_8h_source.html">Protocol.h</a></li>
+<li>src/<a class="el" href="Protocol_8cpp.html">Protocol.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

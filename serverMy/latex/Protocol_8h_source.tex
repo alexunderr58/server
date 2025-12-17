@@ -1,0 +1,49 @@
+\hypertarget{Protocol_8h_source}{}\doxysection{Protocol.\+h}
+\label{Protocol_8h_source}\index{include/Protocol.h@{include/Protocol.h}}
+\mbox{\hyperlink{Protocol_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef PROTOCOL\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define PROTOCOL\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <cstdint>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{classProtocol}{Protocol}} \{}
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     \textcolor{comment}{// Аутентификация}}
+\DoxyCodeLine{35 \textcolor{comment}{}    \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classProtocol_a110db93280f9931c66f3930079afa10f}{sendSalt}}(\textcolor{keywordtype}{int} clientSocket, \textcolor{keyword}{const} std::string\& salt);}
+\DoxyCodeLine{36     }
+\DoxyCodeLine{42     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classProtocol_a4202284089fac0cee1a1d85d7f43dbad}{sendError}}(\textcolor{keywordtype}{int} clientSocket);}
+\DoxyCodeLine{43     }
+\DoxyCodeLine{49     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classProtocol_a95a69029c2b16fe76888f6ade75a422e}{sendOk}}(\textcolor{keywordtype}{int} clientSocket);}
+\DoxyCodeLine{50     }
+\DoxyCodeLine{57     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classProtocol_a84bd3f4ef6bf81f1a7e70bcb48c49303}{receiveLogin}}(\textcolor{keywordtype}{int} clientSocket, std::string\& login);}
+\DoxyCodeLine{58     }
+\DoxyCodeLine{65     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classProtocol_a6c6e69ecd1938782fdd2d48ea14fef9f}{receiveHash}}(\textcolor{keywordtype}{int} clientSocket, std::string\& hash);}
+\DoxyCodeLine{66     }
+\DoxyCodeLine{67     \textcolor{comment}{// Работа с векторами (бинарный формат)}}
+\DoxyCodeLine{74 \textcolor{comment}{}    \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classProtocol_a1ff297a96d5fc00e8e54da5213b66d53}{sendVectorResults}}(\textcolor{keywordtype}{int} clientSocket, }
+\DoxyCodeLine{75                                   \textcolor{keyword}{const} std::vector<double>\& results);}
+\DoxyCodeLine{76     }
+\DoxyCodeLine{83     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classProtocol_a77bde78ae807e2a0b01ca0fbe2ef100d}{receiveVectorData}}(\textcolor{keywordtype}{int} clientSocket, }
+\DoxyCodeLine{84                                   std::vector<uint8\_t>\& binaryData);}
+\DoxyCodeLine{85     }
+\DoxyCodeLine{86     \textcolor{comment}{// Вспомогательные функции}}
+\DoxyCodeLine{94 \textcolor{comment}{}    \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classProtocol_a1383c76d6c950323b4a12967ba7fdc9e}{sendAll}}(\textcolor{keywordtype}{int} socket, \textcolor{keyword}{const} \textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{95     }
+\DoxyCodeLine{103     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classProtocol_a062040d7c738be3f95504d340fa48e09}{recvAll}}(\textcolor{keywordtype}{int} socket, \textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{104     }
+\DoxyCodeLine{110     \textcolor{keyword}{static} std::string \mbox{\hyperlink{classProtocol_ad6933d119313c311c48603d4f53ce7d6}{binaryToHex}}(\textcolor{keyword}{const} std::vector<uint8\_t>\& data);}
+\DoxyCodeLine{111     }
+\DoxyCodeLine{117     \textcolor{keyword}{static} std::vector<uint8\_t> \mbox{\hyperlink{classProtocol_ae08bf79c917ae0ca4ae715a0e1dca2b1}{hexToBinary}}(\textcolor{keyword}{const} std::string\& hex);}
+\DoxyCodeLine{118     }
+\DoxyCodeLine{119 \textcolor{keyword}{private}:}
+\DoxyCodeLine{120     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classProtocol_ac7b544f05cf71e416169fccbfc4104f1}{SEND\_RECV\_TIMEOUT}} = 10; }
+\DoxyCodeLine{121 \};}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// PROTOCOL\_H}}
+
+\end{DoxyCode}

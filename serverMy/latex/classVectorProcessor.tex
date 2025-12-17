@@ -1,0 +1,131 @@
+\hypertarget{classVectorProcessor}{}\doxysection{Класс Vector\+Processor}
+\label{classVectorProcessor}\index{VectorProcessor@{VectorProcessor}}
+
+
+Класс для обработки векторных данных  
+
+
+
+
+{\ttfamily \#include $<$Vector\+Processor.\+h$>$}
+
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structVectorProcessor_1_1VectorResult}{Vector\+Result}}
+\begin{DoxyCompactList}\small\item\em Структура результата обработки векторов \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structVectorProcessor_1_1VectorResult}{Vector\+Result}} \mbox{\hyperlink{classVectorProcessor_af9eef4bb09459d5364e61ed3c194772d}{process\+Vectors}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&binary\+Data)
+\begin{DoxyCompactList}\small\item\em Обработка бинарных векторных данных \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classVectorProcessor_a1f73dd67b560701fbfdfde0601f41ea1}{calculate\+Vector\+Sum}} (const std\+::vector$<$ double $>$ \&vector)
+\begin{DoxyCompactList}\small\item\em Вычисление суммы элементов вектора \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classVectorProcessor_a8e80c05e98e3e388b3ecc1e3b56d6ae2}{read\+UInt32}} (const uint8\+\_\+t $\ast$data, size\+\_\+t \&offset, size\+\_\+t max\+Size, uint32\+\_\+t \&value)
+\begin{DoxyCompactList}\small\item\em Чтение 32-\/битного целого числа из бинарных данных \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classVectorProcessor_a47123e1212ab8b22f4d5d49b22fa960d}{read\+Double}} (const uint8\+\_\+t $\ast$data, size\+\_\+t \&offset, size\+\_\+t max\+Size, double \&value)
+\begin{DoxyCompactList}\small\item\em Чтение числа double из бинарных данных \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для обработки векторных данных 
+
+Реализует парсинг бинарных данных векторов и вычисление суммы их элементов с использованием алгоритма Кэхэна для уменьшения ошибок округления. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classVectorProcessor_a1f73dd67b560701fbfdfde0601f41ea1}\label{classVectorProcessor_a1f73dd67b560701fbfdfde0601f41ea1}} 
+\index{VectorProcessor@{VectorProcessor}!calculateVectorSum@{calculateVectorSum}}
+\index{calculateVectorSum@{calculateVectorSum}!VectorProcessor@{VectorProcessor}}
+\doxysubsubsection{\texorpdfstring{calculateVectorSum()}{calculateVectorSum()}}
+{\footnotesize\ttfamily double Vector\+Processor\+::calculate\+Vector\+Sum (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Вычисление суммы элементов вектора 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em vector} & Вектор для вычисления суммы \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Сумма элементов вектора 
+\end{DoxyReturn}
+\begin{DoxyNote}{Заметки}
+Использует алгоритм Кэхэна для уменьшения ошибок округления 
+\end{DoxyNote}
+\mbox{\Hypertarget{classVectorProcessor_af9eef4bb09459d5364e61ed3c194772d}\label{classVectorProcessor_af9eef4bb09459d5364e61ed3c194772d}} 
+\index{VectorProcessor@{VectorProcessor}!processVectors@{processVectors}}
+\index{processVectors@{processVectors}!VectorProcessor@{VectorProcessor}}
+\doxysubsubsection{\texorpdfstring{processVectors()}{processVectors()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVectorProcessor_1_1VectorResult}{Vector\+Processor\+::\+Vector\+Result}} Vector\+Processor\+::process\+Vectors (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{binary\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Обработка бинарных векторных данных 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em binary\+Data} & Бинарные данные векторов \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Структура с результатами обработки 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVectorProcessor_a47123e1212ab8b22f4d5d49b22fa960d}\label{classVectorProcessor_a47123e1212ab8b22f4d5d49b22fa960d}} 
+\index{VectorProcessor@{VectorProcessor}!readDouble@{readDouble}}
+\index{readDouble@{readDouble}!VectorProcessor@{VectorProcessor}}
+\doxysubsubsection{\texorpdfstring{readDouble()}{readDouble()}}
+{\footnotesize\ttfamily bool Vector\+Processor\+::read\+Double (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{data,  }\item[{size\+\_\+t \&}]{offset,  }\item[{size\+\_\+t}]{max\+Size,  }\item[{double \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Чтение числа double из бинарных данных 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em data} & Указатель на бинарные данные \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em offset} & Текущая позиция в данных (смещается при чтении) \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+Size} & Максимальный размер данных \\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Прочитанное значение \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если чтение успешно, false в случае ошибки 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVectorProcessor_a8e80c05e98e3e388b3ecc1e3b56d6ae2}\label{classVectorProcessor_a8e80c05e98e3e388b3ecc1e3b56d6ae2}} 
+\index{VectorProcessor@{VectorProcessor}!readUInt32@{readUInt32}}
+\index{readUInt32@{readUInt32}!VectorProcessor@{VectorProcessor}}
+\doxysubsubsection{\texorpdfstring{readUInt32()}{readUInt32()}}
+{\footnotesize\ttfamily bool Vector\+Processor\+::read\+UInt32 (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{data,  }\item[{size\+\_\+t \&}]{offset,  }\item[{size\+\_\+t}]{max\+Size,  }\item[{uint32\+\_\+t \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Чтение 32-\/битного целого числа из бинарных данных 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em data} & Указатель на бинарные данные \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em offset} & Текущая позиция в данных (смещается при чтении) \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+Size} & Максимальный размер данных \\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Прочитанное значение \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если чтение успешно, false в случае ошибки 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{VectorProcessor_8h}{Vector\+Processor.\+h}}\item 
+src/\mbox{\hyperlink{VectorProcessor_8cpp}{Vector\+Processor.\+cpp}}\end{DoxyCompactItemize}

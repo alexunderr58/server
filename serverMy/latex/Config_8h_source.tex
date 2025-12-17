@@ -1,0 +1,31 @@
+\hypertarget{Config_8h_source}{}\doxysection{Config.\+h}
+\label{Config_8h_source}\index{include/Config.h@{include/Config.h}}
+\mbox{\hyperlink{Config_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#ifndef CONFIG\_H}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define CONFIG\_H}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceConfig}{Config}} \{}
+\DoxyCodeLine{19     \textcolor{comment}{// Константы по умолчанию}}
+\DoxyCodeLine{20     \textcolor{keyword}{const} std::string \mbox{\hyperlink{namespaceConfig_a1758f55bf46a8cf4bbdc81fa68b57e72}{DEFAULT\_CLIENT\_DB}} = \textcolor{stringliteral}{"{}/etc/vcalc.conf"{}}; }
+\DoxyCodeLine{21     \textcolor{keyword}{const} std::string \mbox{\hyperlink{namespaceConfig_ac3fe1ca1d4fa3fd49a0354fb5f2a7bc0}{DEFAULT\_LOG\_FILE}} = \textcolor{stringliteral}{"{}/var/log/vcalc.log"{}}; }
+\DoxyCodeLine{22     \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespaceConfig_abd2fe065619a6856365e8a93ef5cd0f3}{DEFAULT\_PORT}} = 33333; }
+\DoxyCodeLine{23     }
+\DoxyCodeLine{24     \textcolor{comment}{// Размеры данных}}
+\DoxyCodeLine{25     \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespaceConfig_a11988f0481daf4180868fa75fb8ae9f1}{SALT\_BITS}} = 64; }
+\DoxyCodeLine{26     \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespaceConfig_a51096c5caa7cf4d10617ec85d7b61abb}{SALT\_HEX\_LENGTH}} = 16; }
+\DoxyCodeLine{27     \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespaceConfig_a2e9d228a22974198dc056905baff9694}{MAX\_LOGIN\_LENGTH}} = 32; }
+\DoxyCodeLine{28     \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespaceConfig_a8bf50446e3df0392f0796856cecdc812}{MAX\_PASSWORD\_LENGTH}} = 256; }
+\DoxyCodeLine{29     }
+\DoxyCodeLine{30     \textcolor{comment}{// Протокол}}
+\DoxyCodeLine{31     \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespaceConfig_abb2226f59f3899cf48c983beb469bc0e}{BUFFER\_SIZE}} = 4096; }
+\DoxyCodeLine{32     \textcolor{keyword}{const} std::string \mbox{\hyperlink{namespaceConfig_a204ac74f25bdceafb18cd8ff132ea9bb}{ERR\_MSG}} = \textcolor{stringliteral}{"{}ERR"{}}; }
+\DoxyCodeLine{33     \textcolor{keyword}{const} std::string \mbox{\hyperlink{namespaceConfig_a9499d0cf7b428c46b2bfb3cb1191be6f}{OK\_MSG}} = \textcolor{stringliteral}{"{}OK"{}}; }
+\DoxyCodeLine{34 \}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CONFIG\_H}}
+
+\end{DoxyCode}

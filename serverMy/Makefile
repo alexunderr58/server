@@ -1,71 +1,146 @@
+# ============================================================================
+# VECTOR CALCULATOR SERVER MAKEFILE
+# ============================================================================
+
+# Компилятор и флаги
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -pedantic -O2 -g
 INCLUDES = -I./include
 LIBS = -lssl -lcrypto -lpthread
 
-# Основной сервер
-SRC = src/Server.cpp src/ClientDB.cpp src/Logger.cpp src/Protocol.cpp src/VectorProcessor.cpp
-OBJ = $(SRC:src/%.cpp=obj/%.o)
-EXEC = bin/vcalc_server
+# ============================================================================
+# ОСНОВНОЙ СЕРВЕР
+# ============================================================================
 
-# Тесты
-TEST_DIR = tests
-# Добавим новые тестовые файлы в TEST_SRC
-TEST_SRC = $(TEST_DIR)/test_main.cpp \
-           $(TEST_DIR)/test_clientdb.cpp \
-           $(TEST_DIR)/test_vectorprocessor.cpp \
-           $(TEST_DIR)/test_logger.cpp \
-           $(TEST_DIR)/test_config.cpp \
-           $(TEST_DIR)/test_protocol.cpp \
-           $(TEST_DIR)/test_server.cpp \
-           $(TEST_DIR)/test_filesystem.cpp
-TEST_OBJ = $(TEST_SRC:$(TEST_DIR)/%.cpp=obj/test_%.o)
-TEST_EXEC = bin/run_tests
+# Исходные файлы сервера
+SRC_DIR = src
+SRC = $(SRC_DIR)/main.cpp \
+      $(SRC_DIR)/Server.cpp \
+      $(SRC_DIR)/ClientDB.cpp \
+      $(SRC_DIR)/Logger.cpp \
+      $(SRC_DIR)/Protocol.cpp \
+      $(SRC_DIR)/VectorProcessor.cpp
 
-# Правила по умолчанию
-all: $(EXEC)
+# Объектные файлы
+OBJ_DIR = obj
+OBJ = $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
-# Основной сервер (с отдельным main.cpp)
-$(EXEC): obj/main.o $(OBJ)
-	@mkdir -p bin
-	$(CXX) $(CXXFLAGS) obj/main.o $(OBJ) -o $@ $(LIBS)
+# Исполняемый файл
+EXEC_DIR = bin
+EXEC = $(EXEC_DIR)/vcalc_server
 
-obj/main.o: src/main.cpp
-	@mkdir -p obj
+# ============================================================================
+# ТЕСТЫ
+# ============================================================================
+
+# Модульные тесты
+UNIT_TEST_DIR = tests
+UNIT_TEST_SRC = $(UNIT_TEST_DIR)/test_main.cpp \
+                $(UNIT_TEST_DIR)/test_clientdb.cpp \
+                $(UNIT_TEST_DIR)/test_vectorprocessor.cpp \
+                $(UNIT_TEST_DIR)/test_logger.cpp \
+                $(UNIT_TEST_DIR)/test_config.cpp \
+                $(UNIT_TEST_DIR)/test_protocol.cpp \
+                $(UNIT_TEST_DIR)/test_server.cpp \
+                $(UNIT_TEST_DIR)/test_filesystem.cpp
+
+UNIT_TEST_OBJ = $(UNIT_TEST_SRC:$(UNIT_TEST_DIR)/%.cpp=$(OBJ_DIR)/unit_%.o)
+UNIT_TEST_EXEC = $(EXEC_DIR)/run_unit_tests
+
+# Функциональные тесты
+FUNC_TEST_DIR = tests/functional
+FUNC_TEST_SRC = $(FUNC_TEST_DIR)/test_main.cpp \
+                $(FUNC_TEST_DIR)/test_auth_flow.cpp \
+                $(FUNC_TEST_DIR)/test_vectors_flow.cpp
+
+FUNC_TEST_OBJ = $(FUNC_TEST_SRC:$(FUNC_TEST_DIR)/%.cpp=$(OBJ_DIR)/func_%.o)
+FUNC_TEST_EXEC = $(EXEC_DIR)/run_func_tests
+
+# ============================================================================
+# ПРАВИЛА
+# ============================================================================
+
+.PHONY: all build server run setup clean test unit-test func-test help
+
+all: build
+
+help:
+	@echo "Использование: make [цель]"
+	@echo ""
+	@echo "Цели:"
+	@echo "  all        - Собрать сервер и все тесты"
+	@echo "  build      - Собрать сервер"
+	@echo "  server     - Собрать сервер (аналогично build)"
+	@echo "  run        - Собрать и запустить сервер"
+	@echo "  setup      - Создать тестовую конфигурацию"
+	@echo ""
+	@echo "  test       - Запустить все тесты"
+	@echo "  unit-test  - Запустить только модульные тесты"
+	@echo "  func-test  - Запустить только функциональные тесты"
+	@echo ""
+	@echo "  clean      - Очистить скомпилированные файлы"
+	@echo "  help       - Показать эту справку"
+
+# ============================================================================
+# СБОРКА СЕРВЕРА
+# ============================================================================
+
+build: $(EXEC)
+
+server: build
+
+$(EXEC): $(OBJ)
+	@mkdir -p $(EXEC_DIR)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $@ $(LIBS)
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
+	@mkdir -p $(OBJ_DIR)
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
-obj/%.o: src/%.cpp
-	@mkdir -p obj
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+# ============================================================================
+# ТЕСТЫ
+# ============================================================================
 
-# Тесты (без obj/main.o)
-test: $(TEST_EXEC)
-	@echo "Running tests..."
-	./$(TEST_EXEC)
+test: unit-test func-test
 
-$(TEST_EXEC): $(TEST_OBJ) $(OBJ)  # Только объектные файлы библиотек
-	@mkdir -p bin
-	$(CXX) $(CXXFLAGS) $(TEST_OBJ) $(OBJ) -o $@ $(LIBS)
+unit-test: $(UNIT_TEST_EXEC)
+	@./$(UNIT_TEST_EXEC)
 
-obj/test_%.o: tests/%.cpp
-	@mkdir -p obj
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -I$(TEST_DIR) -c $< -o $@
+$(UNIT_TEST_EXEC): $(UNIT_TEST_OBJ) $(filter-out $(OBJ_DIR)/main.o, $(OBJ))
+	@mkdir -p $(EXEC_DIR)
+	$(CXX) $(CXXFLAGS) $(UNIT_TEST_OBJ) $(filter-out $(OBJ_DIR)/main.o, $(OBJ)) -o $@ $(LIBS)
 
-# Запуск сервера
-run: $(EXEC)
-	./$(EXEC) -c ./data/clients.conf -l ./vcalc.log -p 33333
+$(OBJ_DIR)/unit_%.o: $(UNIT_TEST_DIR)/%.cpp
+	@mkdir -p $(OBJ_DIR)
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -Itests -c $< -o $@
 
-# Настройка тестовой среды
+func-test: $(FUNC_TEST_EXEC)
+	@./$(FUNC_TEST_EXEC)
+
+$(FUNC_TEST_EXEC): $(FUNC_TEST_OBJ) $(filter-out $(OBJ_DIR)/main.o, $(OBJ))
+	@mkdir -p $(EXEC_DIR)
+	$(CXX) $(CXXFLAGS) $(FUNC_TEST_OBJ) $(filter-out $(OBJ_DIR)/main.o, $(OBJ)) -o $@ $(LIBS)
+
+$(OBJ_DIR)/func_%.o: $(FUNC_TEST_DIR)/%.cpp
+	@mkdir -p $(OBJ_DIR)
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -Itests -c $< -o $@
+
+# ============================================================================
+# ЗАПУСК И НАСТРОЙКА
+# ============================================================================
+
+run: build
+	@./$(EXEC) -c ./data/clients.conf -l ./vcalc.log -p 33333
+
 setup:
-	@mkdir -p data obj bin
+	@mkdir -p data $(OBJ_DIR) $(EXEC_DIR)
 	@echo "user:P@ssW0rd" > data/clients.conf
 	@echo "testuser:testpass" >> data/clients.conf
-	@echo "# Тестовый пользователь" >> data/clients.conf
-	@echo "Файл конфигурации создан"
 
-# Очистка
+# ============================================================================
+# ОЧИСТКА
+# ============================================================================
+
 clean:
-	rm -rf obj bin *.log
+	rm -rf $(OBJ_DIR) $(EXEC_DIR) *.log
 	find . -name "*.tmp" -delete 2>/dev/null || true
-
-.PHONY: all test run setup clean

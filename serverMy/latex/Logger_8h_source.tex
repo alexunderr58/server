@@ -1,0 +1,48 @@
+\hypertarget{Logger_8h_source}{}\doxysection{Logger.\+h}
+\label{Logger_8h_source}\index{include/Logger.h@{include/Logger.h}}
+\mbox{\hyperlink{Logger_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef LOGGER\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define LOGGER\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{22 \textcolor{keyword}{enum class} \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9}{LogLevel}} \{}
+\DoxyCodeLine{23     \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a551b723eafd6a31d444fcb2f5920fbd3}{INFO}},      }
+\DoxyCodeLine{24     \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a059e9861e0400dfbe05c98a841f3f96b}{WARNING}},   }
+\DoxyCodeLine{25     \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}},     }
+\DoxyCodeLine{26     \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a99cd1c61610c76a57cb8d10d6df6b870}{CRITICAL}}   }
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{35 \textcolor{keyword}{class }\mbox{\hyperlink{classLogger}{Logger}} \{}
+\DoxyCodeLine{36 \textcolor{keyword}{private}:}
+\DoxyCodeLine{37     std::ofstream \mbox{\hyperlink{classLogger_acc94bd19d6a022e574a5733c87fed67a}{logFile}}; }
+\DoxyCodeLine{38     \textcolor{keyword}{mutable} std::mutex \mbox{\hyperlink{classLogger_a1a7f5dc4185f8bff7778f1d6aa8525a9}{logMutex}};  }
+\DoxyCodeLine{39     std::string \mbox{\hyperlink{classLogger_a7d2eb96ffbb512b79834c8d7313c69b7}{filename}}; }
+\DoxyCodeLine{40     }
+\DoxyCodeLine{45     std::string \mbox{\hyperlink{classLogger_a7c9155373acc639f06f8c63fbe330e55}{getCurrentTime}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{46     }
+\DoxyCodeLine{52     std::string \mbox{\hyperlink{classLogger_abffd3a5b9e2cfb2abc4f2c33b7694d6c}{levelToString}}(\mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9}{LogLevel}} level) \textcolor{keyword}{const};}
+\DoxyCodeLine{53     }
+\DoxyCodeLine{54 \textcolor{keyword}{public}:}
+\DoxyCodeLine{59     \mbox{\hyperlink{classLogger_a4f2ee02db1d03a83b6b9b43808e09f15}{Logger}}(\textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classLogger_a7d2eb96ffbb512b79834c8d7313c69b7}{filename}});}
+\DoxyCodeLine{60     }
+\DoxyCodeLine{65     \mbox{\hyperlink{classLogger_acb668a9e186a25fbaad2e4af6d1ed00a}{\string~Logger}}();}
+\DoxyCodeLine{66     }
+\DoxyCodeLine{71     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classLogger_a1287de14553cab2d7fddb74a015cef63}{initialize}}();}
+\DoxyCodeLine{72     }
+\DoxyCodeLine{79     \textcolor{keywordtype}{void} \mbox{\hyperlink{classLogger_a00490686e9c59f2b860698a170a275e8}{log}}(\mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9}{LogLevel}} level, \textcolor{keyword}{const} std::string\& message, \textcolor{keyword}{const} std::string\& params = \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{80     }
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} \mbox{\hyperlink{classLogger_abd877873217ab857eba848937515ab6f}{logError}}(\textcolor{keywordtype}{bool} isCritical, \textcolor{keyword}{const} std::string\& message, \textcolor{keyword}{const} std::string\& params = \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{88     }
+\DoxyCodeLine{89     \textcolor{comment}{// Запрет копирования}}
+\DoxyCodeLine{90     \mbox{\hyperlink{classLogger_add0f34d4c753c86af8074840a72366b3}{Logger}}(\textcolor{keyword}{const} \mbox{\hyperlink{classLogger}{Logger}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{91     \mbox{\hyperlink{classLogger}{Logger}}\& \mbox{\hyperlink{classLogger_a8c0ca770cdc91ca9fc3015286568e1ea}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classLogger}{Logger}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{92 \};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LOGGER\_H}}
+
+\end{DoxyCode}

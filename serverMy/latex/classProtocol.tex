@@ -1,0 +1,284 @@
+\hypertarget{classProtocol}{}\doxysection{Класс Protocol}
+\label{classProtocol}\index{Protocol@{Protocol}}
+
+
+Класс для работы с сетевым протоколом  
+
+
+
+
+{\ttfamily \#include $<$Protocol.\+h$>$}
+
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classProtocol_a110db93280f9931c66f3930079afa10f}{send\+Salt}} (int client\+Socket, const std\+::string \&salt)
+\begin{DoxyCompactList}\small\item\em Отправка соли клиенту \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classProtocol_a4202284089fac0cee1a1d85d7f43dbad}{send\+Error}} (int client\+Socket)
+\begin{DoxyCompactList}\small\item\em Отправка сообщения об ошибке \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classProtocol_a95a69029c2b16fe76888f6ade75a422e}{send\+Ok}} (int client\+Socket)
+\begin{DoxyCompactList}\small\item\em Отправка сообщения об успехе \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classProtocol_a84bd3f4ef6bf81f1a7e70bcb48c49303}{receive\+Login}} (int client\+Socket, std\+::string \&login)
+\begin{DoxyCompactList}\small\item\em Получение логина от клиента \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classProtocol_a6c6e69ecd1938782fdd2d48ea14fef9f}{receive\+Hash}} (int client\+Socket, std\+::string \&hash)
+\begin{DoxyCompactList}\small\item\em Получение хэша от клиента \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classProtocol_a1ff297a96d5fc00e8e54da5213b66d53}{send\+Vector\+Results}} (int client\+Socket, const std\+::vector$<$ double $>$ \&results)
+\begin{DoxyCompactList}\small\item\em Отправка результатов вычисления векторов \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classProtocol_a77bde78ae807e2a0b01ca0fbe2ef100d}{receive\+Vector\+Data}} (int client\+Socket, std\+::vector$<$ uint8\+\_\+t $>$ \&binary\+Data)
+\begin{DoxyCompactList}\small\item\em Получение векторных данных от клиента \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classProtocol_a1383c76d6c950323b4a12967ba7fdc9e}{send\+All}} (int socket, const void $\ast$buffer, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Отправка всех данных через сокет \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classProtocol_a062040d7c738be3f95504d340fa48e09}{recv\+All}} (int socket, void $\ast$buffer, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Получение всех данных через сокет \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classProtocol_ad6933d119313c311c48603d4f53ce7d6}{binary\+To\+Hex}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Преобразование бинарных данных в hex строку \end{DoxyCompactList}\item 
+static std\+::vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{classProtocol_ae08bf79c917ae0ca4ae715a0e1dca2b1}{hex\+To\+Binary}} (const std\+::string \&hex)
+\begin{DoxyCompactList}\small\item\em Преобразование hex строки в бинарные данные \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые статические данные}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classProtocol_ac7b544f05cf71e416169fccbfc4104f1}{SEND\+\_\+\+RECV\+\_\+\+TIMEOUT}} = 10
+\begin{DoxyCompactList}\small\item\em Таймаут отправки/приема в секундах \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для работы с сетевым протоколом 
+
+Содержит статические методы для отправки и приема данных по сетевому протоколу векторного калькулятора. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classProtocol_ad6933d119313c311c48603d4f53ce7d6}\label{classProtocol_ad6933d119313c311c48603d4f53ce7d6}} 
+\index{Protocol@{Protocol}!binaryToHex@{binaryToHex}}
+\index{binaryToHex@{binaryToHex}!Protocol@{Protocol}}
+\doxysubsubsection{\texorpdfstring{binaryToHex()}{binaryToHex()}}
+{\footnotesize\ttfamily static std\+::string Protocol\+::binary\+To\+Hex (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Преобразование бинарных данных в hex строку 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em data} & Бинарные данные \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Hex строка в верхнем регистре 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classProtocol_ae08bf79c917ae0ca4ae715a0e1dca2b1}\label{classProtocol_ae08bf79c917ae0ca4ae715a0e1dca2b1}} 
+\index{Protocol@{Protocol}!hexToBinary@{hexToBinary}}
+\index{hexToBinary@{hexToBinary}!Protocol@{Protocol}}
+\doxysubsubsection{\texorpdfstring{hexToBinary()}{hexToBinary()}}
+{\footnotesize\ttfamily static std\+::vector$<$ uint8\+\_\+t $>$ Protocol\+::hex\+To\+Binary (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Преобразование hex строки в бинарные данные 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em hex} & Hex строка \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Бинарные данные 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classProtocol_a6c6e69ecd1938782fdd2d48ea14fef9f}\label{classProtocol_a6c6e69ecd1938782fdd2d48ea14fef9f}} 
+\index{Protocol@{Protocol}!receiveHash@{receiveHash}}
+\index{receiveHash@{receiveHash}!Protocol@{Protocol}}
+\doxysubsubsection{\texorpdfstring{receiveHash()}{receiveHash()}}
+{\footnotesize\ttfamily bool Protocol\+::receive\+Hash (\begin{DoxyParamCaption}\item[{int}]{client\+Socket,  }\item[{std\+::string \&}]{hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Получение хэша от клиента 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Сокет клиента \\
+\hline
+\mbox{\texttt{ out}}  & {\em hash} & Полученный хэш \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если хэш успешно получен, false в случае ошибки 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classProtocol_a84bd3f4ef6bf81f1a7e70bcb48c49303}\label{classProtocol_a84bd3f4ef6bf81f1a7e70bcb48c49303}} 
+\index{Protocol@{Protocol}!receiveLogin@{receiveLogin}}
+\index{receiveLogin@{receiveLogin}!Protocol@{Protocol}}
+\doxysubsubsection{\texorpdfstring{receiveLogin()}{receiveLogin()}}
+{\footnotesize\ttfamily bool Protocol\+::receive\+Login (\begin{DoxyParamCaption}\item[{int}]{client\+Socket,  }\item[{std\+::string \&}]{login }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Получение логина от клиента 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Сокет клиента \\
+\hline
+\mbox{\texttt{ out}}  & {\em login} & Полученный логин \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если логин успешно получен, false в случае ошибки 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classProtocol_a77bde78ae807e2a0b01ca0fbe2ef100d}\label{classProtocol_a77bde78ae807e2a0b01ca0fbe2ef100d}} 
+\index{Protocol@{Protocol}!receiveVectorData@{receiveVectorData}}
+\index{receiveVectorData@{receiveVectorData}!Protocol@{Protocol}}
+\doxysubsubsection{\texorpdfstring{receiveVectorData()}{receiveVectorData()}}
+{\footnotesize\ttfamily bool Protocol\+::receive\+Vector\+Data (\begin{DoxyParamCaption}\item[{int}]{client\+Socket,  }\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{binary\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Получение векторных данных от клиента 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Сокет клиента \\
+\hline
+\mbox{\texttt{ out}}  & {\em binary\+Data} & Полученные бинарные данные \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если данные успешно получены, false в случае ошибки 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classProtocol_a062040d7c738be3f95504d340fa48e09}\label{classProtocol_a062040d7c738be3f95504d340fa48e09}} 
+\index{Protocol@{Protocol}!recvAll@{recvAll}}
+\index{recvAll@{recvAll}!Protocol@{Protocol}}
+\doxysubsubsection{\texorpdfstring{recvAll()}{recvAll()}}
+{\footnotesize\ttfamily bool Protocol\+::recv\+All (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Получение всех данных через сокет 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em socket} & Сокет для приема \\
+\hline
+\mbox{\texttt{ out}}  & {\em buffer} & Буфер для данных \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & Ожидаемая длина данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если все данные получены, false в случае ошибки 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classProtocol_a1383c76d6c950323b4a12967ba7fdc9e}\label{classProtocol_a1383c76d6c950323b4a12967ba7fdc9e}} 
+\index{Protocol@{Protocol}!sendAll@{sendAll}}
+\index{sendAll@{sendAll}!Protocol@{Protocol}}
+\doxysubsubsection{\texorpdfstring{sendAll()}{sendAll()}}
+{\footnotesize\ttfamily bool Protocol\+::send\+All (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Отправка всех данных через сокет 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em socket} & Сокет для отправки \\
+\hline
+\mbox{\texttt{ in}}  & {\em buffer} & Буфер с данными \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & Длина данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если все данные отправлены, false в случае ошибки 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classProtocol_a4202284089fac0cee1a1d85d7f43dbad}\label{classProtocol_a4202284089fac0cee1a1d85d7f43dbad}} 
+\index{Protocol@{Protocol}!sendError@{sendError}}
+\index{sendError@{sendError}!Protocol@{Protocol}}
+\doxysubsubsection{\texorpdfstring{sendError()}{sendError()}}
+{\footnotesize\ttfamily bool Protocol\+::send\+Error (\begin{DoxyParamCaption}\item[{int}]{client\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Отправка сообщения об ошибке 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Сокет клиента \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если сообщение успешно отправлено, false в случае ошибки 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classProtocol_a95a69029c2b16fe76888f6ade75a422e}\label{classProtocol_a95a69029c2b16fe76888f6ade75a422e}} 
+\index{Protocol@{Protocol}!sendOk@{sendOk}}
+\index{sendOk@{sendOk}!Protocol@{Protocol}}
+\doxysubsubsection{\texorpdfstring{sendOk()}{sendOk()}}
+{\footnotesize\ttfamily bool Protocol\+::send\+Ok (\begin{DoxyParamCaption}\item[{int}]{client\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Отправка сообщения об успехе 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Сокет клиента \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если сообщение успешно отправлено, false в случае ошибки 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classProtocol_a110db93280f9931c66f3930079afa10f}\label{classProtocol_a110db93280f9931c66f3930079afa10f}} 
+\index{Protocol@{Protocol}!sendSalt@{sendSalt}}
+\index{sendSalt@{sendSalt}!Protocol@{Protocol}}
+\doxysubsubsection{\texorpdfstring{sendSalt()}{sendSalt()}}
+{\footnotesize\ttfamily bool Protocol\+::send\+Salt (\begin{DoxyParamCaption}\item[{int}]{client\+Socket,  }\item[{const std\+::string \&}]{salt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Отправка соли клиенту 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Сокет клиента \\
+\hline
+\mbox{\texttt{ in}}  & {\em salt} & Соль для отправки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если соль успешно отправлена, false в случае ошибки 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classProtocol_a1ff297a96d5fc00e8e54da5213b66d53}\label{classProtocol_a1ff297a96d5fc00e8e54da5213b66d53}} 
+\index{Protocol@{Protocol}!sendVectorResults@{sendVectorResults}}
+\index{sendVectorResults@{sendVectorResults}!Protocol@{Protocol}}
+\doxysubsubsection{\texorpdfstring{sendVectorResults()}{sendVectorResults()}}
+{\footnotesize\ttfamily bool Protocol\+::send\+Vector\+Results (\begin{DoxyParamCaption}\item[{int}]{client\+Socket,  }\item[{const std\+::vector$<$ double $>$ \&}]{results }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Отправка результатов вычисления векторов 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Сокет клиента \\
+\hline
+\mbox{\texttt{ in}}  & {\em results} & Результаты вычислений \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если результаты успешно отправлены, false в случае ошибки 
+\end{DoxyReturn}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classProtocol_ac7b544f05cf71e416169fccbfc4104f1}\label{classProtocol_ac7b544f05cf71e416169fccbfc4104f1}} 
+\index{Protocol@{Protocol}!SEND\_RECV\_TIMEOUT@{SEND\_RECV\_TIMEOUT}}
+\index{SEND\_RECV\_TIMEOUT@{SEND\_RECV\_TIMEOUT}!Protocol@{Protocol}}
+\doxysubsubsection{\texorpdfstring{SEND\_RECV\_TIMEOUT}{SEND\_RECV\_TIMEOUT}}
+{\footnotesize\ttfamily const int Protocol\+::\+SEND\+\_\+\+RECV\+\_\+\+TIMEOUT = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Таймаут отправки/приема в секундах 
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Protocol_8h}{Protocol.\+h}}\item 
+src/\mbox{\hyperlink{Protocol_8cpp}{Protocol.\+cpp}}\end{DoxyCompactItemize}

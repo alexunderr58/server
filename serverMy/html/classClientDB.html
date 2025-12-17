@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vector Calculator Server: Класс ClientDB</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Vector Calculator Server<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classClientDB-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс ClientDB</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс для управления базой данных клиентов  
+ <a href="classClientDB.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ClientDB_8h_source.html">ClientDB.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a75d269b442d7cc3f4175a4f6b680062e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientDB.html#a75d269b442d7cc3f4175a4f6b680062e">ClientDB</a> (const std::string &amp;<a class="el" href="classClientDB.html#a2eee7ddf71b2ee25e220f34f34ca08c7">filename</a>)</td></tr>
+<tr class="memdesc:a75d269b442d7cc3f4175a4f6b680062e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор класса <a class="el" href="classClientDB.html" title="Класс для управления базой данных клиентов">ClientDB</a>.  <a href="classClientDB.html#a75d269b442d7cc3f4175a4f6b680062e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a75d269b442d7cc3f4175a4f6b680062e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e0c6a14ef41113040989af250da2651"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientDB.html#a7e0c6a14ef41113040989af250da2651">loadFromFile</a> ()</td></tr>
+<tr class="memdesc:a7e0c6a14ef41113040989af250da2651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка клиентов из файла  <a href="classClientDB.html#a7e0c6a14ef41113040989af250da2651">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7e0c6a14ef41113040989af250da2651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dd185bf41aabe29e6bec130a953148a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientDB.html#a9dd185bf41aabe29e6bec130a953148a">saveToFile</a> ()</td></tr>
+<tr class="memdesc:a9dd185bf41aabe29e6bec130a953148a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохранение клиентов в файл  <a href="classClientDB.html#a9dd185bf41aabe29e6bec130a953148a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9dd185bf41aabe29e6bec130a953148a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5262acfb23853560807a528d4047a30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientDB.html#ae5262acfb23853560807a528d4047a30">clientExists</a> (const std::string &amp;login) const</td></tr>
+<tr class="memdesc:ae5262acfb23853560807a528d4047a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка существования клиента  <a href="classClientDB.html#ae5262acfb23853560807a528d4047a30">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae5262acfb23853560807a528d4047a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdfd0697bca9d25360418a48ee5e64ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientDB.html#acdfd0697bca9d25360418a48ee5e64ff">verifyPassword</a> (const std::string &amp;login, const std::string &amp;passwordHash) const</td></tr>
+<tr class="memdesc:acdfd0697bca9d25360418a48ee5e64ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка хэша пароля клиента  <a href="classClientDB.html#acdfd0697bca9d25360418a48ee5e64ff">Подробнее...</a><br /></td></tr>
+<tr class="separator:acdfd0697bca9d25360418a48ee5e64ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54bbd229dbbfb24c247335fbae6b6fe6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientDB.html#a54bbd229dbbfb24c247335fbae6b6fe6">addClient</a> (const std::string &amp;login, const std::string &amp;password)</td></tr>
+<tr class="memdesc:a54bbd229dbbfb24c247335fbae6b6fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление нового клиента  <a href="classClientDB.html#a54bbd229dbbfb24c247335fbae6b6fe6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a54bbd229dbbfb24c247335fbae6b6fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42c145e87086102424ec3dc151c802cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientDB.html#a42c145e87086102424ec3dc151c802cb">removeClient</a> (const std::string &amp;login)</td></tr>
+<tr class="memdesc:a42c145e87086102424ec3dc151c802cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление клиента  <a href="classClientDB.html#a42c145e87086102424ec3dc151c802cb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a42c145e87086102424ec3dc151c802cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a866f65223c63949a8ad4f318967c1fe2"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientDB.html#a866f65223c63949a8ad4f318967c1fe2">generateHash</a> (const std::string &amp;salt, const std::string &amp;password)</td></tr>
+<tr class="memdesc:a866f65223c63949a8ad4f318967c1fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Генерация хэша SHA-1 для проверки пароля  <a href="classClientDB.html#a866f65223c63949a8ad4f318967c1fe2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a866f65223c63949a8ad4f318967c1fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c985ae2f7889c8a5fbcf64ca664daa4"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientDB.html#a1c985ae2f7889c8a5fbcf64ca664daa4">generateSalt</a> ()</td></tr>
+<tr class="memdesc:a1c985ae2f7889c8a5fbcf64ca664daa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Генерация случайной соли  <a href="classClientDB.html#a1c985ae2f7889c8a5fbcf64ca664daa4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1c985ae2f7889c8a5fbcf64ca664daa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:ae05cd410539e0a63e29c024337e0e010"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientDB.html#ae05cd410539e0a63e29c024337e0e010">clients</a></td></tr>
+<tr class="memdesc:ae05cd410539e0a63e29c024337e0e010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хранилище клиентов: логин -&gt; хэш пароля  <a href="classClientDB.html#ae05cd410539e0a63e29c024337e0e010">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae05cd410539e0a63e29c024337e0e010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eed4b084e6a6558c89744d5b408d1ac"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientDB.html#a3eed4b084e6a6558c89744d5b408d1ac">dbMutex</a></td></tr>
+<tr class="memdesc:a3eed4b084e6a6558c89744d5b408d1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Мьютекс для потокобезопасности (mutable для const методов)  <a href="classClientDB.html#a3eed4b084e6a6558c89744d5b408d1ac">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3eed4b084e6a6558c89744d5b408d1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eee7ddf71b2ee25e220f34f34ca08c7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientDB.html#a2eee7ddf71b2ee25e220f34f34ca08c7">filename</a></td></tr>
+<tr class="memdesc:a2eee7ddf71b2ee25e220f34f34ca08c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя файла базы данных  <a href="classClientDB.html#a2eee7ddf71b2ee25e220f34f34ca08c7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2eee7ddf71b2ee25e220f34f34ca08c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Класс для управления базой данных клиентов </p>
+<p >Реализует хранение пар логин-хэш_пароля в памяти с возможностью сохранения в файл и загрузки из него. Потокобезопасен за счет использования мьютекса. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a75d269b442d7cc3f4175a4f6b680062e" name="a75d269b442d7cc3f4175a4f6b680062e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d269b442d7cc3f4175a4f6b680062e">&#9670;&nbsp;</a></span>ClientDB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ClientDB::ClientDB </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор класса <a class="el" href="classClientDB.html" title="Класс для управления базой данных клиентов">ClientDB</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Имя файла для хранения базы клиентов </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a54bbd229dbbfb24c247335fbae6b6fe6" name="a54bbd229dbbfb24c247335fbae6b6fe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54bbd229dbbfb24c247335fbae6b6fe6">&#9670;&nbsp;</a></span>addClient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientDB::addClient </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>login</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавление нового клиента </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">login</td><td>Логин нового клиента </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">password</td><td>Пароль нового клиента </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если клиент успешно добавлен, false в случае ошибки </dd></dl>
+
+</div>
+</div>
+<a id="ae5262acfb23853560807a528d4047a30" name="ae5262acfb23853560807a528d4047a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5262acfb23853560807a528d4047a30">&#9670;&nbsp;</a></span>clientExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientDB::clientExists </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>login</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка существования клиента </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">login</td><td>Логин клиента для проверки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если клиент существует, false в противном случае </dd></dl>
+
+</div>
+</div>
+<a id="a866f65223c63949a8ad4f318967c1fe2" name="a866f65223c63949a8ad4f318967c1fe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a866f65223c63949a8ad4f318967c1fe2">&#9670;&nbsp;</a></span>generateHash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ClientDB::generateHash </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>salt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Генерация хэша SHA-1 для проверки пароля </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">salt</td><td>Соль для хэширования </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">password</td><td>Пароль для хэширования </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Хэш SHA-1 в виде hex строки в верхнем регистре </dd></dl>
+
+</div>
+</div>
+<a id="a1c985ae2f7889c8a5fbcf64ca664daa4" name="a1c985ae2f7889c8a5fbcf64ca664daa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c985ae2f7889c8a5fbcf64ca664daa4">&#9670;&nbsp;</a></span>generateSalt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ClientDB::generateSalt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Генерация случайной соли </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Случайная соль длиной 16 hex символов в верхнем регистре </dd></dl>
+
+</div>
+</div>
+<a id="a7e0c6a14ef41113040989af250da2651" name="a7e0c6a14ef41113040989af250da2651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0c6a14ef41113040989af250da2651">&#9670;&nbsp;</a></span>loadFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientDB::loadFromFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загрузка клиентов из файла </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true если файл успешно загружен, false в случае ошибки </dd></dl>
+
+</div>
+</div>
+<a id="a42c145e87086102424ec3dc151c802cb" name="a42c145e87086102424ec3dc151c802cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42c145e87086102424ec3dc151c802cb">&#9670;&nbsp;</a></span>removeClient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientDB::removeClient </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>login</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление клиента </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">login</td><td>Логин клиента для удаления </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если клиент успешно удален, false если клиент не найден </dd></dl>
+
+</div>
+</div>
+<a id="a9dd185bf41aabe29e6bec130a953148a" name="a9dd185bf41aabe29e6bec130a953148a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dd185bf41aabe29e6bec130a953148a">&#9670;&nbsp;</a></span>saveToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientDB::saveToFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сохранение клиентов в файл </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true если файл успешно сохранен, false в случае ошибки </dd></dl>
+
+</div>
+</div>
+<a id="acdfd0697bca9d25360418a48ee5e64ff" name="acdfd0697bca9d25360418a48ee5e64ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdfd0697bca9d25360418a48ee5e64ff">&#9670;&nbsp;</a></span>verifyPassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientDB::verifyPassword </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>login</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>passwordHash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка хэша пароля клиента </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">login</td><td>Логин клиента </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">passwordHash</td><td>Хэш пароля для проверки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если хэш совпадает, false в противном случае </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ae05cd410539e0a63e29c024337e0e010" name="ae05cd410539e0a63e29c024337e0e010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae05cd410539e0a63e29c024337e0e010">&#9670;&nbsp;</a></span>clients</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, std::string&gt; ClientDB::clients</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Хранилище клиентов: логин -&gt; хэш пароля </p>
+
+</div>
+</div>
+<a id="a3eed4b084e6a6558c89744d5b408d1ac" name="a3eed4b084e6a6558c89744d5b408d1ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eed4b084e6a6558c89744d5b408d1ac">&#9670;&nbsp;</a></span>dbMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex ClientDB::dbMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Мьютекс для потокобезопасности (mutable для const методов) </p>
+
+</div>
+</div>
+<a id="a2eee7ddf71b2ee25e220f34f34ca08c7" name="a2eee7ddf71b2ee25e220f34f34ca08c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eee7ddf71b2ee25e220f34f34ca08c7">&#9670;&nbsp;</a></span>filename</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ClientDB::filename</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Имя файла базы данных </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>include/<a class="el" href="ClientDB_8h_source.html">ClientDB.h</a></li>
+<li>src/<a class="el" href="ClientDB_8cpp.html">ClientDB.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

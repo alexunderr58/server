@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vector Calculator Server: Исходный файл include/Protocol.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Vector Calculator Server<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Protocol.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Protocol_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef PROTOCOL_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define PROTOCOL_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classProtocol.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="classProtocol.html">Protocol</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// Аутентификация</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classProtocol.html#a110db93280f9931c66f3930079afa10f">sendSalt</a>(<span class="keywordtype">int</span> clientSocket, <span class="keyword">const</span> std::string&amp; salt);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classProtocol.html#a4202284089fac0cee1a1d85d7f43dbad">sendError</a>(<span class="keywordtype">int</span> clientSocket);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classProtocol.html#a95a69029c2b16fe76888f6ade75a422e">sendOk</a>(<span class="keywordtype">int</span> clientSocket);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classProtocol.html#a84bd3f4ef6bf81f1a7e70bcb48c49303">receiveLogin</a>(<span class="keywordtype">int</span> clientSocket, std::string&amp; login);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classProtocol.html#a6c6e69ecd1938782fdd2d48ea14fef9f">receiveHash</a>(<span class="keywordtype">int</span> clientSocket, std::string&amp; hash);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// Работа с векторами (бинарный формат)</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment"></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classProtocol.html#a1ff297a96d5fc00e8e54da5213b66d53">sendVectorResults</a>(<span class="keywordtype">int</span> clientSocket, </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                                  <span class="keyword">const</span> std::vector&lt;double&gt;&amp; results);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classProtocol.html#a77bde78ae807e2a0b01ca0fbe2ef100d">receiveVectorData</a>(<span class="keywordtype">int</span> clientSocket, </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                                  std::vector&lt;uint8_t&gt;&amp; binaryData);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// Вспомогательные функции</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment"></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classProtocol.html#a1383c76d6c950323b4a12967ba7fdc9e">sendAll</a>(<span class="keywordtype">int</span> socket, <span class="keyword">const</span> <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classProtocol.html#a062040d7c738be3f95504d340fa48e09">recvAll</a>(<span class="keywordtype">int</span> socket, <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classProtocol.html#ad6933d119313c311c48603d4f53ce7d6">  110</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classProtocol.html#ad6933d119313c311c48603d4f53ce7d6">binaryToHex</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; data);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classProtocol.html#ae08bf79c917ae0ca4ae715a0e1dca2b1">  117</a></span>    <span class="keyword">static</span> std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classProtocol.html#ae08bf79c917ae0ca4ae715a0e1dca2b1">hexToBinary</a>(<span class="keyword">const</span> std::string&amp; hex);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classProtocol.html#ac7b544f05cf71e416169fccbfc4104f1">  120</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classProtocol.html#ac7b544f05cf71e416169fccbfc4104f1">SEND_RECV_TIMEOUT</a> = 10; </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>};</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#endif </span><span class="comment">// PROTOCOL_H</span></div>
+<div class="ttc" id="aclassProtocol_html"><div class="ttname"><a href="classProtocol.html">Protocol</a></div><div class="ttdoc">Класс для работы с сетевым протоколом</div><div class="ttdef"><b>Definition:</b> Protocol.h:26</div></div>
+<div class="ttc" id="aclassProtocol_html_a062040d7c738be3f95504d340fa48e09"><div class="ttname"><a href="classProtocol.html#a062040d7c738be3f95504d340fa48e09">Protocol::recvAll</a></div><div class="ttdeci">static bool recvAll(int socket, void *buffer, size_t length)</div><div class="ttdoc">Получение всех данных через сокет</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:185</div></div>
+<div class="ttc" id="aclassProtocol_html_a110db93280f9931c66f3930079afa10f"><div class="ttname"><a href="classProtocol.html#a110db93280f9931c66f3930079afa10f">Protocol::sendSalt</a></div><div class="ttdeci">static bool sendSalt(int clientSocket, const std::string &amp;salt)</div><div class="ttdoc">Отправка соли клиенту</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:14</div></div>
+<div class="ttc" id="aclassProtocol_html_a1383c76d6c950323b4a12967ba7fdc9e"><div class="ttname"><a href="classProtocol.html#a1383c76d6c950323b4a12967ba7fdc9e">Protocol::sendAll</a></div><div class="ttdeci">static bool sendAll(int socket, const void *buffer, size_t length)</div><div class="ttdoc">Отправка всех данных через сокет</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:168</div></div>
+<div class="ttc" id="aclassProtocol_html_a1ff297a96d5fc00e8e54da5213b66d53"><div class="ttname"><a href="classProtocol.html#a1ff297a96d5fc00e8e54da5213b66d53">Protocol::sendVectorResults</a></div><div class="ttdeci">static bool sendVectorResults(int clientSocket, const std::vector&lt; double &gt; &amp;results)</div><div class="ttdoc">Отправка результатов вычисления векторов</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:89</div></div>
+<div class="ttc" id="aclassProtocol_html_a4202284089fac0cee1a1d85d7f43dbad"><div class="ttname"><a href="classProtocol.html#a4202284089fac0cee1a1d85d7f43dbad">Protocol::sendError</a></div><div class="ttdeci">static bool sendError(int clientSocket)</div><div class="ttdoc">Отправка сообщения об ошибке</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:22</div></div>
+<div class="ttc" id="aclassProtocol_html_a6c6e69ecd1938782fdd2d48ea14fef9f"><div class="ttname"><a href="classProtocol.html#a6c6e69ecd1938782fdd2d48ea14fef9f">Protocol::receiveHash</a></div><div class="ttdeci">static bool receiveHash(int clientSocket, std::string &amp;hash)</div><div class="ttdoc">Получение хэша от клиента</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:61</div></div>
+<div class="ttc" id="aclassProtocol_html_a77bde78ae807e2a0b01ca0fbe2ef100d"><div class="ttname"><a href="classProtocol.html#a77bde78ae807e2a0b01ca0fbe2ef100d">Protocol::receiveVectorData</a></div><div class="ttdeci">static bool receiveVectorData(int clientSocket, std::vector&lt; uint8_t &gt; &amp;binaryData)</div><div class="ttdoc">Получение векторных данных от клиента</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:95</div></div>
+<div class="ttc" id="aclassProtocol_html_a84bd3f4ef6bf81f1a7e70bcb48c49303"><div class="ttname"><a href="classProtocol.html#a84bd3f4ef6bf81f1a7e70bcb48c49303">Protocol::receiveLogin</a></div><div class="ttdeci">static bool receiveLogin(int clientSocket, std::string &amp;login)</div><div class="ttdoc">Получение логина от клиента</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:30</div></div>
+<div class="ttc" id="aclassProtocol_html_a95a69029c2b16fe76888f6ade75a422e"><div class="ttname"><a href="classProtocol.html#a95a69029c2b16fe76888f6ade75a422e">Protocol::sendOk</a></div><div class="ttdeci">static bool sendOk(int clientSocket)</div><div class="ttdoc">Отправка сообщения об успехе</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:26</div></div>
+<div class="ttc" id="aclassProtocol_html_ac7b544f05cf71e416169fccbfc4104f1"><div class="ttname"><a href="classProtocol.html#ac7b544f05cf71e416169fccbfc4104f1">Protocol::SEND_RECV_TIMEOUT</a></div><div class="ttdeci">static const int SEND_RECV_TIMEOUT</div><div class="ttdoc">Таймаут отправки/приема в секундах</div><div class="ttdef"><b>Definition:</b> Protocol.h:120</div></div>
+<div class="ttc" id="aclassProtocol_html_ad6933d119313c311c48603d4f53ce7d6"><div class="ttname"><a href="classProtocol.html#ad6933d119313c311c48603d4f53ce7d6">Protocol::binaryToHex</a></div><div class="ttdeci">static std::string binaryToHex(const std::vector&lt; uint8_t &gt; &amp;data)</div><div class="ttdoc">Преобразование бинарных данных в hex строку</div></div>
+<div class="ttc" id="aclassProtocol_html_ae08bf79c917ae0ca4ae715a0e1dca2b1"><div class="ttname"><a href="classProtocol.html#ae08bf79c917ae0ca4ae715a0e1dca2b1">Protocol::hexToBinary</a></div><div class="ttdeci">static std::vector&lt; uint8_t &gt; hexToBinary(const std::string &amp;hex)</div><div class="ttdoc">Преобразование hex строки в бинарные данные</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

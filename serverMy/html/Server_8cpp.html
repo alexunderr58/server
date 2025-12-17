@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vector Calculator Server: Файл src/Server.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Vector Calculator Server<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Файл Server.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="Server_8h_source.html">Server.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Logger_8h_source.html">Logger.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ClientDB_8h_source.html">ClientDB.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Protocol_8h_source.html">Protocol.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="VectorProcessor_8h_source.html">VectorProcessor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Config_8h_source.html">Config.h</a>&quot;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+<code>#include &lt;netinet/in.h&gt;</code><br />
+<code>#include &lt;arpa/inet.h&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для Server.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="Server_8cpp__incl.png" border="0" usemap="#asrc_2Server_8cpp" alt=""/></div>
+<map name="asrc_2Server_8cpp" id="asrc_2Server_8cpp">
+<area shape="rect" title=" " alt="" coords="755,5,861,32"/>
+<area shape="rect" href="Server_8h.html" title="Основной класс сервера векторного калькулятора" alt="" coords="679,80,750,107"/>
+<area shape="rect" href="Logger_8h.html" title="Класс для логирования событий сервера" alt="" coords="113,80,185,107"/>
+<area shape="rect" href="ClientDB_8h.html" title="Класс для работы с базой данных клиентов" alt="" coords="215,80,302,107"/>
+<area shape="rect" href="Protocol_8h.html" title="Класс для работы с сетевым протоколом сервера" alt="" coords="421,80,502,107"/>
+<area shape="rect" href="VectorProcessor_8h.html" title="Класс для обработки векторных данных" alt="" coords="526,80,655,107"/>
+<area shape="rect" href="Config_8h.html" title="Заголовочный файл с конфигурационными константами сервера" alt="" coords="326,80,397,107"/>
+<area shape="rect" title=" " alt="" coords="774,80,842,107"/>
+<area shape="rect" title=" " alt="" coords="867,80,960,107"/>
+<area shape="rect" title=" " alt="" coords="985,80,1071,107"/>
+<area shape="rect" title=" " alt="" coords="1096,80,1179,107"/>
+<area shape="rect" title=" " alt="" coords="1203,80,1264,107"/>
+<area shape="rect" title=" " alt="" coords="1288,80,1360,107"/>
+<area shape="rect" title=" " alt="" coords="1384,80,1453,107"/>
+<area shape="rect" title=" " alt="" coords="314,155,369,181"/>
+<area shape="rect" title=" " alt="" coords="749,155,811,181"/>
+<area shape="rect" title=" " alt="" coords="835,155,893,181"/>
+<area shape="rect" title=" " alt="" coords="667,155,725,181"/>
+<area shape="rect" title=" " alt="" coords="918,155,989,181"/>
+<area shape="rect" title=" " alt="" coords="5,155,72,181"/>
+<area shape="rect" title=" " alt="" coords="96,155,155,181"/>
+<area shape="rect" title=" " alt="" coords="179,155,290,181"/>
+<area shape="rect" title=" " alt="" coords="393,155,468,181"/>
+<area shape="rect" title=" " alt="" coords="492,155,553,181"/>
+<area shape="rect" title=" " alt="" coords="578,155,643,181"/>
+</map>
+</div>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

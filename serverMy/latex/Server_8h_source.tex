@@ -1,0 +1,57 @@
+\hypertarget{Server_8h_source}{}\doxysection{Server.\+h}
+\label{Server_8h_source}\index{include/Server.h@{include/Server.h}}
+\mbox{\hyperlink{Server_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef SERVER\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define SERVER\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <atomic>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{comment}{// Предварительные объявления}}
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{classLogger}{Logger}};}
+\DoxyCodeLine{23 \textcolor{keyword}{class }\mbox{\hyperlink{classClientDB}{ClientDB}};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{31 \textcolor{keyword}{class }\mbox{\hyperlink{classServer}{Server}} \{}
+\DoxyCodeLine{32 \textcolor{keyword}{private}:}
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} \mbox{\hyperlink{classServer_a926c9dae229a62b6d33fdbb41dca6d82}{port}}; }
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} \mbox{\hyperlink{classServer_a0e1f90d176dd31898b84088e6f4c1d87}{serverSocket}}; }
+\DoxyCodeLine{35     std::atomic<bool> \mbox{\hyperlink{classServer_a56d45552461580ea61cb85293663875e}{running}}; }
+\DoxyCodeLine{36     std::unique\_ptr<Logger> \mbox{\hyperlink{classServer_a26265a2754991752eee43f17303147ec}{logger}}; }
+\DoxyCodeLine{37     std::unique\_ptr<ClientDB> \mbox{\hyperlink{classServer_a2cfbfb835e138c9f90b6b9b5eb4de376}{clientDB}}; }
+\DoxyCodeLine{38     }
+\DoxyCodeLine{39     std::vector<std::thread> \mbox{\hyperlink{classServer_a5223d43253229fa1fd7919e2a3e6e666}{clientThreads}}; }
+\DoxyCodeLine{40     }
+\DoxyCodeLine{45     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classServer_a20e711282af6b6826164f072a18ad020}{initializeSocket}}();}
+\DoxyCodeLine{46     }
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_a452594d15d1943b0be0569475d4375ec}{cleanup}}();}
+\DoxyCodeLine{51     }
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_a1e0e064acb019cbe4c022857eed95a77}{handleClient}}(\textcolor{keywordtype}{int} clientSocket);}
+\DoxyCodeLine{57     }
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_a05b7d0cceefa6bb24f33e45fd3edc252}{clientSession}}(\textcolor{keywordtype}{int} clientSocket);}
+\DoxyCodeLine{63     }
+\DoxyCodeLine{70     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classServer_a6dc14b0e6f6865527086a52146ee865c}{authenticateClient}}(\textcolor{keywordtype}{int} clientSocket, std::string\& clientLogin);}
+\DoxyCodeLine{71     }
+\DoxyCodeLine{72 \textcolor{keyword}{public}:}
+\DoxyCodeLine{79     \mbox{\hyperlink{classServer_a375d630113a4c8342b42c1a550b34538}{Server}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classServer_a926c9dae229a62b6d33fdbb41dca6d82}{port}}, \textcolor{keyword}{const} std::string\& clientDbFile, \textcolor{keyword}{const} std::string\& logFile);}
+\DoxyCodeLine{80     }
+\DoxyCodeLine{85     \mbox{\hyperlink{classServer_a4b3aa2579cb1c8cd1d069582c14d0fa6}{\string~Server}}();}
+\DoxyCodeLine{86     }
+\DoxyCodeLine{91     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classServer_aef42e8353dbb746ac0da85a3bec1ad6c}{initialize}}();}
+\DoxyCodeLine{92     }
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_a7eac07d2582fa01c2671362efa955b31}{start}}();}
+\DoxyCodeLine{98     }
+\DoxyCodeLine{103     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_a07c45a7e101a3926d8f9685c3c5d14e4}{stop}}();}
+\DoxyCodeLine{104     }
+\DoxyCodeLine{109     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_aee823a6f8446c1beccc499cd52a06365}{waitForStop}}();}
+\DoxyCodeLine{110     }
+\DoxyCodeLine{115     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classServer_ae3ba3c53ed91e26e378954d9958121ca}{getConnectedClients}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{116 \};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SERVER\_H}}
+
+\end{DoxyCode}

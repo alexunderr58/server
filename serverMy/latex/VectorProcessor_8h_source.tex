@@ -1,0 +1,32 @@
+\hypertarget{VectorProcessor_8h_source}{}\doxysection{Vector\+Processor.\+h}
+\label{VectorProcessor_8h_source}\index{include/VectorProcessor.h@{include/VectorProcessor.h}}
+\mbox{\hyperlink{VectorProcessor_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef VECTORPROCESSOR\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define VECTORPROCESSOR\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <cstdint>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <cstddef>}  \textcolor{comment}{// Добавлено для size\_t}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{classVectorProcessor}{VectorProcessor}} \{}
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31     \textcolor{keyword}{struct }\mbox{\hyperlink{structVectorProcessor_1_1VectorResult}{VectorResult}} \{}
+\DoxyCodeLine{32         uint32\_t \mbox{\hyperlink{structVectorProcessor_1_1VectorResult_a212a6b4785c5a5306d6cd521b8cbe93a}{count}}; }
+\DoxyCodeLine{33         std::vector<double> \mbox{\hyperlink{structVectorProcessor_1_1VectorResult_abc04e50ae8af04236086df0e78799357}{sums}}; }
+\DoxyCodeLine{34     \};}
+\DoxyCodeLine{35     }
+\DoxyCodeLine{41     \textcolor{keyword}{static} \mbox{\hyperlink{structVectorProcessor_1_1VectorResult}{VectorResult}} \mbox{\hyperlink{classVectorProcessor_af9eef4bb09459d5364e61ed3c194772d}{processVectors}}(\textcolor{keyword}{const} std::vector<uint8\_t>\& binaryData);}
+\DoxyCodeLine{42     }
+\DoxyCodeLine{49     \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classVectorProcessor_a1f73dd67b560701fbfdfde0601f41ea1}{calculateVectorSum}}(\textcolor{keyword}{const} std::vector<double>\& vector);}
+\DoxyCodeLine{50     }
+\DoxyCodeLine{51 \textcolor{keyword}{private}:}
+\DoxyCodeLine{60     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classVectorProcessor_a8e80c05e98e3e388b3ecc1e3b56d6ae2}{readUInt32}}(\textcolor{keyword}{const} uint8\_t* data, \textcolor{keywordtype}{size\_t}\& offset, \textcolor{keywordtype}{size\_t} maxSize, uint32\_t\& value);}
+\DoxyCodeLine{61     }
+\DoxyCodeLine{70     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classVectorProcessor_a47123e1212ab8b22f4d5d49b22fa960d}{readDouble}}(\textcolor{keyword}{const} uint8\_t* data, \textcolor{keywordtype}{size\_t}\& offset, \textcolor{keywordtype}{size\_t} maxSize, \textcolor{keywordtype}{double}\& value);}
+\DoxyCodeLine{71 \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// VECTORPROCESSOR\_H}}
+
+\end{DoxyCode}

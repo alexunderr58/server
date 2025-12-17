@@ -1,0 +1,302 @@
+\begin{theindex}
+
+  \item {$\sim$Logger}
+    \subitem {Logger}, \hyperpage{18}
+  \item {$\sim$Server}
+    \subitem {Server}, \hyperpage{28}
+
+  \indexspace
+
+  \item {addClient}
+    \subitem {ClientDB}, \hyperpage{12}
+  \item {authenticateClient}
+    \subitem {Server}, \hyperpage{28}
+
+  \indexspace
+
+  \item {binaryToHex}
+    \subitem {Protocol}, \hyperpage{21}
+  \item {BUFFER\_SIZE}
+    \subitem {Config}, \hyperpage{7}
+
+  \indexspace
+
+  \item {calculateVectorSum}
+    \subitem {VectorProcessor}, \hyperpage{32}
+  \item {cleanup}
+    \subitem {Server}, \hyperpage{28}
+  \item {ClientDB}, \hyperpage{11}
+    \subitem {addClient}, \hyperpage{12}
+    \subitem {ClientDB}, \hyperpage{12}
+    \subitem {clientExists}, \hyperpage{13}
+    \subitem {clients}, \hyperpage{16}
+    \subitem {dbMutex}, \hyperpage{16}
+    \subitem {filename}, \hyperpage{16}
+    \subitem {generateHash}, \hyperpage{13}
+    \subitem {generateSalt}, \hyperpage{13}
+    \subitem {loadFromFile}, \hyperpage{14}
+    \subitem {removeClient}, \hyperpage{14}
+    \subitem {saveToFile}, \hyperpage{14}
+    \subitem {verifyPassword}, \hyperpage{14}
+  \item {clientDB}
+    \subitem {Server}, \hyperpage{30}
+  \item {clientExists}
+    \subitem {ClientDB}, \hyperpage{13}
+  \item {clients}
+    \subitem {ClientDB}, \hyperpage{16}
+  \item {clientSession}
+    \subitem {Server}, \hyperpage{28}
+  \item {clientThreads}
+    \subitem {Server}, \hyperpage{30}
+  \item {Config}, \hyperpage{7}
+    \subitem {BUFFER\_SIZE}, \hyperpage{7}
+    \subitem {DEFAULT\_CLIENT\_DB}, \hyperpage{7}
+    \subitem {DEFAULT\_LOG\_FILE}, \hyperpage{8}
+    \subitem {DEFAULT\_PORT}, \hyperpage{8}
+    \subitem {ERR\_MSG}, \hyperpage{8}
+    \subitem {MAX\_LOGIN\_LENGTH}, \hyperpage{8}
+    \subitem {MAX\_PASSWORD\_LENGTH}, \hyperpage{8}
+    \subitem {OK\_MSG}, \hyperpage{8}
+    \subitem {SALT\_BITS}, \hyperpage{9}
+    \subitem {SALT\_HEX\_LENGTH}, \hyperpage{9}
+  \item {count}
+    \subitem {VectorProcessor::VectorResult}, \hyperpage{34}
+  \item {CRITICAL}
+    \subitem {Logger.h}, \hyperpage{42}
+
+  \indexspace
+
+  \item {dbMutex}
+    \subitem {ClientDB}, \hyperpage{16}
+  \item {DEFAULT\_CLIENT\_DB}
+    \subitem {Config}, \hyperpage{7}
+  \item {DEFAULT\_LOG\_FILE}
+    \subitem {Config}, \hyperpage{8}
+  \item {DEFAULT\_PORT}
+    \subitem {Config}, \hyperpage{8}
+
+  \indexspace
+
+  \item {ERR\_MSG}
+    \subitem {Config}, \hyperpage{8}
+  \item {ERROR}
+    \subitem {Logger.h}, \hyperpage{42}
+
+  \indexspace
+
+  \item {filename}
+    \subitem {ClientDB}, \hyperpage{16}
+    \subitem {Logger}, \hyperpage{20}
+
+  \indexspace
+
+  \item {generateHash}
+    \subitem {ClientDB}, \hyperpage{13}
+  \item {generateSalt}
+    \subitem {ClientDB}, \hyperpage{13}
+  \item {getConnectedClients}
+    \subitem {Server}, \hyperpage{29}
+  \item {getCurrentTime}
+    \subitem {Logger}, \hyperpage{18}
+
+  \indexspace
+
+  \item {handleClient}
+    \subitem {Server}, \hyperpage{29}
+  \item {hexToBinary}
+    \subitem {Protocol}, \hyperpage{22}
+
+  \indexspace
+
+  \item {include/ClientDB.h}, \hyperpage{37, 38}
+  \item {include/Config.h}, \hyperpage{39, 40}
+  \item {include/Logger.h}, \hyperpage{41, 42}
+  \item {include/Protocol.h}, \hyperpage{43}, \hyperpage{45}
+  \item {include/Server.h}, \hyperpage{45}, \hyperpage{47}
+  \item {include/VectorProcessor.h}, \hyperpage{47}, \hyperpage{49}
+  \item {INFO}
+    \subitem {Logger.h}, \hyperpage{42}
+  \item {initialize}
+    \subitem {Logger}, \hyperpage{18}
+    \subitem {Server}, \hyperpage{29}
+  \item {initializeSocket}
+    \subitem {Server}, \hyperpage{29}
+
+  \indexspace
+
+  \item {levelToString}
+    \subitem {Logger}, \hyperpage{18}
+  \item {loadFromFile}
+    \subitem {ClientDB}, \hyperpage{14}
+  \item {log}
+    \subitem {Logger}, \hyperpage{19}
+  \item {logError}
+    \subitem {Logger}, \hyperpage{19}
+  \item {logFile}
+    \subitem {Logger}, \hyperpage{20}
+  \item {Logger}, \hyperpage{16}
+    \subitem {$\sim$Logger}, \hyperpage{18}
+    \subitem {filename}, \hyperpage{20}
+    \subitem {getCurrentTime}, \hyperpage{18}
+    \subitem {initialize}, \hyperpage{18}
+    \subitem {levelToString}, \hyperpage{18}
+    \subitem {log}, \hyperpage{19}
+    \subitem {logError}, \hyperpage{19}
+    \subitem {logFile}, \hyperpage{20}
+    \subitem {Logger}, \hyperpage{17, 18}
+    \subitem {logMutex}, \hyperpage{20}
+    \subitem {operator=}, \hyperpage{19}
+  \item {logger}
+    \subitem {Server}, \hyperpage{31}
+  \item {Logger.h}
+    \subitem {CRITICAL}, \hyperpage{42}
+    \subitem {ERROR}, \hyperpage{42}
+    \subitem {INFO}, \hyperpage{42}
+    \subitem {LogLevel}, \hyperpage{42}
+    \subitem {WARNING}, \hyperpage{42}
+  \item {LogLevel}
+    \subitem {Logger.h}, \hyperpage{42}
+  \item {logMutex}
+    \subitem {Logger}, \hyperpage{20}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{50}
+  \item {main.cpp}
+    \subitem {main}, \hyperpage{50}
+    \subitem {printHelp}, \hyperpage{51}
+    \subitem {server}, \hyperpage{51}
+    \subitem {signalHandler}, \hyperpage{51}
+  \item {MAX\_LOGIN\_LENGTH}
+    \subitem {Config}, \hyperpage{8}
+  \item {MAX\_PASSWORD\_LENGTH}
+    \subitem {Config}, \hyperpage{8}
+
+  \indexspace
+
+  \item {OK\_MSG}
+    \subitem {Config}, \hyperpage{8}
+  \item {operator=}
+    \subitem {Logger}, \hyperpage{19}
+
+  \indexspace
+
+  \item {port}
+    \subitem {Server}, \hyperpage{31}
+  \item {printHelp}
+    \subitem {main.cpp}, \hyperpage{51}
+  \item {processVectors}
+    \subitem {VectorProcessor}, \hyperpage{33}
+  \item {Protocol}, \hyperpage{20}
+    \subitem {binaryToHex}, \hyperpage{21}
+    \subitem {hexToBinary}, \hyperpage{22}
+    \subitem {receiveHash}, \hyperpage{22}
+    \subitem {receiveLogin}, \hyperpage{22}
+    \subitem {receiveVectorData}, \hyperpage{23}
+    \subitem {recvAll}, \hyperpage{23}
+    \subitem {SEND\_RECV\_TIMEOUT}, \hyperpage{26}
+    \subitem {sendAll}, \hyperpage{24}
+    \subitem {sendError}, \hyperpage{24}
+    \subitem {sendOk}, \hyperpage{25}
+    \subitem {sendSalt}, \hyperpage{25}
+    \subitem {sendVectorResults}, \hyperpage{25}
+
+  \indexspace
+
+  \item {readDouble}
+    \subitem {VectorProcessor}, \hyperpage{33}
+  \item {readUInt32}
+    \subitem {VectorProcessor}, \hyperpage{33}
+  \item {receiveHash}
+    \subitem {Protocol}, \hyperpage{22}
+  \item {receiveLogin}
+    \subitem {Protocol}, \hyperpage{22}
+  \item {receiveVectorData}
+    \subitem {Protocol}, \hyperpage{23}
+  \item {recvAll}
+    \subitem {Protocol}, \hyperpage{23}
+  \item {removeClient}
+    \subitem {ClientDB}, \hyperpage{14}
+  \item {running}
+    \subitem {Server}, \hyperpage{31}
+
+  \indexspace
+
+  \item {SALT\_BITS}
+    \subitem {Config}, \hyperpage{9}
+  \item {SALT\_HEX\_LENGTH}
+    \subitem {Config}, \hyperpage{9}
+  \item {saveToFile}
+    \subitem {ClientDB}, \hyperpage{14}
+  \item {SEND\_RECV\_TIMEOUT}
+    \subitem {Protocol}, \hyperpage{26}
+  \item {sendAll}
+    \subitem {Protocol}, \hyperpage{24}
+  \item {sendError}
+    \subitem {Protocol}, \hyperpage{24}
+  \item {sendOk}
+    \subitem {Protocol}, \hyperpage{25}
+  \item {sendSalt}
+    \subitem {Protocol}, \hyperpage{25}
+  \item {sendVectorResults}
+    \subitem {Protocol}, \hyperpage{25}
+  \item {Server}, \hyperpage{26}
+    \subitem {$\sim$Server}, \hyperpage{28}
+    \subitem {authenticateClient}, \hyperpage{28}
+    \subitem {cleanup}, \hyperpage{28}
+    \subitem {clientDB}, \hyperpage{30}
+    \subitem {clientSession}, \hyperpage{28}
+    \subitem {clientThreads}, \hyperpage{30}
+    \subitem {getConnectedClients}, \hyperpage{29}
+    \subitem {handleClient}, \hyperpage{29}
+    \subitem {initialize}, \hyperpage{29}
+    \subitem {initializeSocket}, \hyperpage{29}
+    \subitem {logger}, \hyperpage{31}
+    \subitem {port}, \hyperpage{31}
+    \subitem {running}, \hyperpage{31}
+    \subitem {Server}, \hyperpage{27}
+    \subitem {serverSocket}, \hyperpage{31}
+    \subitem {start}, \hyperpage{30}
+    \subitem {stop}, \hyperpage{30}
+    \subitem {waitForStop}, \hyperpage{30}
+  \item {server}
+    \subitem {main.cpp}, \hyperpage{51}
+  \item {serverSocket}
+    \subitem {Server}, \hyperpage{31}
+  \item {signalHandler}
+    \subitem {main.cpp}, \hyperpage{51}
+  \item {src/ClientDB.cpp}, \hyperpage{49}
+  \item {src/Logger.cpp}, \hyperpage{49}
+  \item {src/main.cpp}, \hyperpage{50}
+  \item {src/Protocol.cpp}, \hyperpage{51}
+  \item {src/Server.cpp}, \hyperpage{52}
+  \item {src/VectorProcessor.cpp}, \hyperpage{52}
+  \item {start}
+    \subitem {Server}, \hyperpage{30}
+  \item {stop}
+    \subitem {Server}, \hyperpage{30}
+  \item {sums}
+    \subitem {VectorProcessor::VectorResult}, \hyperpage{35}
+
+  \indexspace
+
+  \item {VectorProcessor}, \hyperpage{31}
+    \subitem {calculateVectorSum}, \hyperpage{32}
+    \subitem {processVectors}, \hyperpage{33}
+    \subitem {readDouble}, \hyperpage{33}
+    \subitem {readUInt32}, \hyperpage{33}
+  \item {VectorProcessor::VectorResult}, \hyperpage{34}
+    \subitem {count}, \hyperpage{34}
+    \subitem {sums}, \hyperpage{35}
+  \item {verifyPassword}
+    \subitem {ClientDB}, \hyperpage{14}
+
+  \indexspace
+
+  \item {waitForStop}
+    \subitem {Server}, \hyperpage{30}
+  \item {WARNING}
+    \subitem {Logger.h}, \hyperpage{42}
+
+\end{theindex}

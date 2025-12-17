@@ -1,0 +1,69 @@
+\hypertarget{Config_8h}{}\doxysection{Файл include/\+Config.h}
+\label{Config_8h}\index{include/Config.h@{include/Config.h}}
+
+
+Заголовочный файл с конфигурационными константами сервера  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+Граф включаемых заголовочных файлов для Config.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{Config_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Config_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Пространства имен}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceConfig}{Config}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceConfig_a1758f55bf46a8cf4bbdc81fa68b57e72}{Config\+::\+DEFAULT\+\_\+\+CLIENT\+\_\+\+DB}} = \char`\"{}/etc/vcalc.\+conf\char`\"{}
+\begin{DoxyCompactList}\small\item\em Файл базы клиентов по умолчанию \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{namespaceConfig_ac3fe1ca1d4fa3fd49a0354fb5f2a7bc0}{Config\+::\+DEFAULT\+\_\+\+LOG\+\_\+\+FILE}} = \char`\"{}/var/log/vcalc.\+log\char`\"{}
+\begin{DoxyCompactList}\small\item\em Файл журнала по умолчанию \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespaceConfig_abd2fe065619a6856365e8a93ef5cd0f3}{Config\+::\+DEFAULT\+\_\+\+PORT}} = 33333
+\begin{DoxyCompactList}\small\item\em Порт сервера по умолчанию \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespaceConfig_a11988f0481daf4180868fa75fb8ae9f1}{Config\+::\+SALT\+\_\+\+BITS}} = 64
+\begin{DoxyCompactList}\small\item\em Размер соли в битах \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespaceConfig_a51096c5caa7cf4d10617ec85d7b61abb}{Config\+::\+SALT\+\_\+\+HEX\+\_\+\+LENGTH}} = 16
+\begin{DoxyCompactList}\small\item\em Длина соли в hex символах \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespaceConfig_a2e9d228a22974198dc056905baff9694}{Config\+::\+MAX\+\_\+\+LOGIN\+\_\+\+LENGTH}} = 32
+\begin{DoxyCompactList}\small\item\em Максимальная длина логина \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespaceConfig_a8bf50446e3df0392f0796856cecdc812}{Config\+::\+MAX\+\_\+\+PASSWORD\+\_\+\+LENGTH}} = 256
+\begin{DoxyCompactList}\small\item\em Максимальная длина пароля \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{namespaceConfig_abb2226f59f3899cf48c983beb469bc0e}{Config\+::\+BUFFER\+\_\+\+SIZE}} = 4096
+\begin{DoxyCompactList}\small\item\em Размер буфера для сетевых операций \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{namespaceConfig_a204ac74f25bdceafb18cd8ff132ea9bb}{Config\+::\+ERR\+\_\+\+MSG}} = \char`\"{}ERR\char`\"{}
+\begin{DoxyCompactList}\small\item\em Сообщение об ошибке \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{namespaceConfig_a9499d0cf7b428c46b2bfb3cb1191be6f}{Config\+::\+OK\+\_\+\+MSG}} = \char`\"{}OK\char`\"{}
+\begin{DoxyCompactList}\small\item\em Сообщение об успехе \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Заголовочный файл с конфигурационными константами сервера 
+
+\begin{DoxyAuthor}{Автор}
+Alexander Melekhin 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Версия}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Дата}
+2024
+\end{DoxyDate}
+Содержит константы по умолчанию для порта, файлов, размеров данных и сообщений протокола \begin{DoxyWarning}{Предупреждения}
+Изменение констант может повлиять на совместимость с клиентами 
+\end{DoxyWarning}

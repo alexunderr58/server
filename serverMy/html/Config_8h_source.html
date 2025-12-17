@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vector Calculator Server: Исходный файл include/Config.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Vector Calculator Server<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Config.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Config_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef CONFIG_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define CONFIG_H</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespaceConfig.html">   18</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceConfig.html">Config</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// Константы по умолчанию</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespaceConfig.html#a1758f55bf46a8cf4bbdc81fa68b57e72">   20</a></span>    <span class="keyword">const</span> std::string <a class="code hl_variable" href="namespaceConfig.html#a1758f55bf46a8cf4bbdc81fa68b57e72">DEFAULT_CLIENT_DB</a> = <span class="stringliteral">&quot;/etc/vcalc.conf&quot;</span>; </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespaceConfig.html#ac3fe1ca1d4fa3fd49a0354fb5f2a7bc0">   21</a></span>    <span class="keyword">const</span> std::string <a class="code hl_variable" href="namespaceConfig.html#ac3fe1ca1d4fa3fd49a0354fb5f2a7bc0">DEFAULT_LOG_FILE</a> = <span class="stringliteral">&quot;/var/log/vcalc.log&quot;</span>; </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespaceConfig.html#abd2fe065619a6856365e8a93ef5cd0f3">   22</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespaceConfig.html#abd2fe065619a6856365e8a93ef5cd0f3">DEFAULT_PORT</a> = 33333; </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// Размеры данных</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespaceConfig.html#a11988f0481daf4180868fa75fb8ae9f1">   25</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespaceConfig.html#a11988f0481daf4180868fa75fb8ae9f1">SALT_BITS</a> = 64; </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespaceConfig.html#a51096c5caa7cf4d10617ec85d7b61abb">   26</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespaceConfig.html#a51096c5caa7cf4d10617ec85d7b61abb">SALT_HEX_LENGTH</a> = 16; </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespaceConfig.html#a2e9d228a22974198dc056905baff9694">   27</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespaceConfig.html#a2e9d228a22974198dc056905baff9694">MAX_LOGIN_LENGTH</a> = 32; </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespaceConfig.html#a8bf50446e3df0392f0796856cecdc812">   28</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespaceConfig.html#a8bf50446e3df0392f0796856cecdc812">MAX_PASSWORD_LENGTH</a> = 256; </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// Протокол</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="namespaceConfig.html#abb2226f59f3899cf48c983beb469bc0e">   31</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespaceConfig.html#abb2226f59f3899cf48c983beb469bc0e">BUFFER_SIZE</a> = 4096; </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="namespaceConfig.html#a204ac74f25bdceafb18cd8ff132ea9bb">   32</a></span>    <span class="keyword">const</span> std::string <a class="code hl_variable" href="namespaceConfig.html#a204ac74f25bdceafb18cd8ff132ea9bb">ERR_MSG</a> = <span class="stringliteral">&quot;ERR&quot;</span>; </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="namespaceConfig.html#a9499d0cf7b428c46b2bfb3cb1191be6f">   33</a></span>    <span class="keyword">const</span> std::string <a class="code hl_variable" href="namespaceConfig.html#a9499d0cf7b428c46b2bfb3cb1191be6f">OK_MSG</a> = <span class="stringliteral">&quot;OK&quot;</span>; </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif </span><span class="comment">// CONFIG_H</span></div>
+<div class="ttc" id="anamespaceConfig_html"><div class="ttname"><a href="namespaceConfig.html">Config</a></div><div class="ttdef"><b>Definition:</b> Config.h:18</div></div>
+<div class="ttc" id="anamespaceConfig_html_a11988f0481daf4180868fa75fb8ae9f1"><div class="ttname"><a href="namespaceConfig.html#a11988f0481daf4180868fa75fb8ae9f1">Config::SALT_BITS</a></div><div class="ttdeci">const int SALT_BITS</div><div class="ttdoc">Размер соли в битах</div><div class="ttdef"><b>Definition:</b> Config.h:25</div></div>
+<div class="ttc" id="anamespaceConfig_html_a1758f55bf46a8cf4bbdc81fa68b57e72"><div class="ttname"><a href="namespaceConfig.html#a1758f55bf46a8cf4bbdc81fa68b57e72">Config::DEFAULT_CLIENT_DB</a></div><div class="ttdeci">const std::string DEFAULT_CLIENT_DB</div><div class="ttdoc">Файл базы клиентов по умолчанию</div><div class="ttdef"><b>Definition:</b> Config.h:20</div></div>
+<div class="ttc" id="anamespaceConfig_html_a204ac74f25bdceafb18cd8ff132ea9bb"><div class="ttname"><a href="namespaceConfig.html#a204ac74f25bdceafb18cd8ff132ea9bb">Config::ERR_MSG</a></div><div class="ttdeci">const std::string ERR_MSG</div><div class="ttdoc">Сообщение об ошибке</div><div class="ttdef"><b>Definition:</b> Config.h:32</div></div>
+<div class="ttc" id="anamespaceConfig_html_a2e9d228a22974198dc056905baff9694"><div class="ttname"><a href="namespaceConfig.html#a2e9d228a22974198dc056905baff9694">Config::MAX_LOGIN_LENGTH</a></div><div class="ttdeci">const int MAX_LOGIN_LENGTH</div><div class="ttdoc">Максимальная длина логина</div><div class="ttdef"><b>Definition:</b> Config.h:27</div></div>
+<div class="ttc" id="anamespaceConfig_html_a51096c5caa7cf4d10617ec85d7b61abb"><div class="ttname"><a href="namespaceConfig.html#a51096c5caa7cf4d10617ec85d7b61abb">Config::SALT_HEX_LENGTH</a></div><div class="ttdeci">const int SALT_HEX_LENGTH</div><div class="ttdoc">Длина соли в hex символах</div><div class="ttdef"><b>Definition:</b> Config.h:26</div></div>
+<div class="ttc" id="anamespaceConfig_html_a8bf50446e3df0392f0796856cecdc812"><div class="ttname"><a href="namespaceConfig.html#a8bf50446e3df0392f0796856cecdc812">Config::MAX_PASSWORD_LENGTH</a></div><div class="ttdeci">const int MAX_PASSWORD_LENGTH</div><div class="ttdoc">Максимальная длина пароля</div><div class="ttdef"><b>Definition:</b> Config.h:28</div></div>
+<div class="ttc" id="anamespaceConfig_html_a9499d0cf7b428c46b2bfb3cb1191be6f"><div class="ttname"><a href="namespaceConfig.html#a9499d0cf7b428c46b2bfb3cb1191be6f">Config::OK_MSG</a></div><div class="ttdeci">const std::string OK_MSG</div><div class="ttdoc">Сообщение об успехе</div><div class="ttdef"><b>Definition:</b> Config.h:33</div></div>
+<div class="ttc" id="anamespaceConfig_html_abb2226f59f3899cf48c983beb469bc0e"><div class="ttname"><a href="namespaceConfig.html#abb2226f59f3899cf48c983beb469bc0e">Config::BUFFER_SIZE</a></div><div class="ttdeci">const int BUFFER_SIZE</div><div class="ttdoc">Размер буфера для сетевых операций</div><div class="ttdef"><b>Definition:</b> Config.h:31</div></div>
+<div class="ttc" id="anamespaceConfig_html_abd2fe065619a6856365e8a93ef5cd0f3"><div class="ttname"><a href="namespaceConfig.html#abd2fe065619a6856365e8a93ef5cd0f3">Config::DEFAULT_PORT</a></div><div class="ttdeci">const int DEFAULT_PORT</div><div class="ttdoc">Порт сервера по умолчанию</div><div class="ttdef"><b>Definition:</b> Config.h:22</div></div>
+<div class="ttc" id="anamespaceConfig_html_ac3fe1ca1d4fa3fd49a0354fb5f2a7bc0"><div class="ttname"><a href="namespaceConfig.html#ac3fe1ca1d4fa3fd49a0354fb5f2a7bc0">Config::DEFAULT_LOG_FILE</a></div><div class="ttdeci">const std::string DEFAULT_LOG_FILE</div><div class="ttdoc">Файл журнала по умолчанию</div><div class="ttdef"><b>Definition:</b> Config.h:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

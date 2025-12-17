@@ -1,0 +1,42 @@
+\hypertarget{ClientDB_8h_source}{}\doxysection{Client\+DB.\+h}
+\label{ClientDB_8h_source}\index{include/ClientDB.h@{include/ClientDB.h}}
+\mbox{\hyperlink{ClientDB_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#ifndef CLIENTDB\_H}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define CLIENTDB\_H}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{28 \textcolor{keyword}{class }\mbox{\hyperlink{classClientDB}{ClientDB}} \{}
+\DoxyCodeLine{29 \textcolor{keyword}{private}:}
+\DoxyCodeLine{30     std::unordered\_map<std::string, std::string> \mbox{\hyperlink{classClientDB_ae05cd410539e0a63e29c024337e0e010}{clients}}; }
+\DoxyCodeLine{31     \textcolor{keyword}{mutable} std::mutex \mbox{\hyperlink{classClientDB_a3eed4b084e6a6558c89744d5b408d1ac}{dbMutex}};  }
+\DoxyCodeLine{32     std::string \mbox{\hyperlink{classClientDB_a2eee7ddf71b2ee25e220f34f34ca08c7}{filename}}; }
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34 \textcolor{keyword}{public}:}
+\DoxyCodeLine{39     \mbox{\hyperlink{classClientDB_a75d269b442d7cc3f4175a4f6b680062e}{ClientDB}}(\textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classClientDB_a2eee7ddf71b2ee25e220f34f34ca08c7}{filename}});}
+\DoxyCodeLine{40     }
+\DoxyCodeLine{45     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classClientDB_a7e0c6a14ef41113040989af250da2651}{loadFromFile}}();}
+\DoxyCodeLine{46     }
+\DoxyCodeLine{51     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classClientDB_a9dd185bf41aabe29e6bec130a953148a}{saveToFile}}();}
+\DoxyCodeLine{52     }
+\DoxyCodeLine{58     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classClientDB_ae5262acfb23853560807a528d4047a30}{clientExists}}(\textcolor{keyword}{const} std::string\& login) \textcolor{keyword}{const};}
+\DoxyCodeLine{59     }
+\DoxyCodeLine{66     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classClientDB_acdfd0697bca9d25360418a48ee5e64ff}{verifyPassword}}(\textcolor{keyword}{const} std::string\& login, \textcolor{keyword}{const} std::string\& passwordHash) \textcolor{keyword}{const};}
+\DoxyCodeLine{67     }
+\DoxyCodeLine{74     \textcolor{keyword}{static} std::string \mbox{\hyperlink{classClientDB_a866f65223c63949a8ad4f318967c1fe2}{generateHash}}(\textcolor{keyword}{const} std::string\& salt, \textcolor{keyword}{const} std::string\& password);}
+\DoxyCodeLine{75     }
+\DoxyCodeLine{80     \textcolor{keyword}{static} std::string \mbox{\hyperlink{classClientDB_a1c985ae2f7889c8a5fbcf64ca664daa4}{generateSalt}}();}
+\DoxyCodeLine{81     }
+\DoxyCodeLine{88     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classClientDB_a54bbd229dbbfb24c247335fbae6b6fe6}{addClient}}(\textcolor{keyword}{const} std::string\& login, \textcolor{keyword}{const} std::string\& password);}
+\DoxyCodeLine{89     }
+\DoxyCodeLine{95     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classClientDB_a42c145e87086102424ec3dc151c802cb}{removeClient}}(\textcolor{keyword}{const} std::string\& login);}
+\DoxyCodeLine{96 \};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CLIENTDB\_H}}
+
+\end{DoxyCode}

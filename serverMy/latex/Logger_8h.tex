@@ -1,0 +1,85 @@
+\hypertarget{Logger_8h}{}\doxysection{Файл include/\+Logger.h}
+\label{Logger_8h}\index{include/Logger.h@{include/Logger.h}}
+
+
+Класс для логирования событий сервера  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+Граф включаемых заголовочных файлов для Logger.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{Logger_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{Logger_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classLogger}{Logger}}
+\begin{DoxyCompactList}\small\item\em Класс для ведения журнала событий \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}} \{ \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a551b723eafd6a31d444fcb2f5920fbd3}{INFO}}
+, \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a059e9861e0400dfbe05c98a841f3f96b}{WARNING}}
+, \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}}
+, \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a99cd1c61610c76a57cb8d10d6df6b870}{CRITICAL}}
+ \}
+\begin{DoxyCompactList}\small\item\em Уровни логирования \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для логирования событий сервера 
+
+\begin{DoxyAuthor}{Автор}
+Alexander Melekhin 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Версия}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Дата}
+2024
+\end{DoxyDate}
+Обеспечивает запись логов в файл с различными уровнями важности. Потокобезопасный. Автоматически закрывает файл при уничтожении. 
+
+\doxysubsection{Перечисления}
+\mbox{\Hypertarget{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9}\label{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9}} 
+\index{Logger.h@{Logger.h}!LogLevel@{LogLevel}}
+\index{LogLevel@{LogLevel}!Logger.h@{Logger.h}}
+\doxysubsubsection{\texorpdfstring{LogLevel}{LogLevel}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Уровни логирования 
+
+\begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INFO@{INFO}!Logger.h@{Logger.h}}\index{Logger.h@{Logger.h}!INFO@{INFO}}}\mbox{\Hypertarget{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a551b723eafd6a31d444fcb2f5920fbd3}\label{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a551b723eafd6a31d444fcb2f5920fbd3}} 
+INFO&Информационные сообщения \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WARNING@{WARNING}!Logger.h@{Logger.h}}\index{Logger.h@{Logger.h}!WARNING@{WARNING}}}\mbox{\Hypertarget{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a059e9861e0400dfbe05c98a841f3f96b}\label{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a059e9861e0400dfbe05c98a841f3f96b}} 
+WARNING&Предупреждения \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR@{ERROR}!Logger.h@{Logger.h}}\index{Logger.h@{Logger.h}!ERROR@{ERROR}}}\mbox{\Hypertarget{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5}\label{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5}} 
+ERROR&Ошибки \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CRITICAL@{CRITICAL}!Logger.h@{Logger.h}}\index{Logger.h@{Logger.h}!CRITICAL@{CRITICAL}}}\mbox{\Hypertarget{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a99cd1c61610c76a57cb8d10d6df6b870}\label{Logger_8h_aca1fd1d8935433e6ba2e3918214e07f9a99cd1c61610c76a57cb8d10d6df6b870}} 
+CRITICAL&Критические ошибки \\
+\hline
+
+\end{DoxyEnumFields}

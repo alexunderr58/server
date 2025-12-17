@@ -1,0 +1,244 @@
+\hypertarget{classClientDB}{}\doxysection{Класс Client\+DB}
+\label{classClientDB}\index{ClientDB@{ClientDB}}
+
+
+Класс для управления базой данных клиентов  
+
+
+
+
+{\ttfamily \#include $<$Client\+DB.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classClientDB_a75d269b442d7cc3f4175a4f6b680062e}{Client\+DB}} (const std\+::string \&\mbox{\hyperlink{classClientDB_a2eee7ddf71b2ee25e220f34f34ca08c7}{filename}})
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classClientDB}{Client\+DB}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classClientDB_a7e0c6a14ef41113040989af250da2651}{load\+From\+File}} ()
+\begin{DoxyCompactList}\small\item\em Загрузка клиентов из файла \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classClientDB_a9dd185bf41aabe29e6bec130a953148a}{save\+To\+File}} ()
+\begin{DoxyCompactList}\small\item\em Сохранение клиентов в файл \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classClientDB_ae5262acfb23853560807a528d4047a30}{client\+Exists}} (const std\+::string \&login) const
+\begin{DoxyCompactList}\small\item\em Проверка существования клиента \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classClientDB_acdfd0697bca9d25360418a48ee5e64ff}{verify\+Password}} (const std\+::string \&login, const std\+::string \&password\+Hash) const
+\begin{DoxyCompactList}\small\item\em Проверка хэша пароля клиента \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classClientDB_a54bbd229dbbfb24c247335fbae6b6fe6}{add\+Client}} (const std\+::string \&login, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em Добавление нового клиента \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classClientDB_a42c145e87086102424ec3dc151c802cb}{remove\+Client}} (const std\+::string \&login)
+\begin{DoxyCompactList}\small\item\em Удаление клиента \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classClientDB_a866f65223c63949a8ad4f318967c1fe2}{generate\+Hash}} (const std\+::string \&salt, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em Генерация хэша SHA-\/1 для проверки пароля \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classClientDB_a1c985ae2f7889c8a5fbcf64ca664daa4}{generate\+Salt}} ()
+\begin{DoxyCompactList}\small\item\em Генерация случайной соли \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classClientDB_ae05cd410539e0a63e29c024337e0e010}{clients}}
+\begin{DoxyCompactList}\small\item\em Хранилище клиентов\+: логин -\/\texorpdfstring{$>$}{>} хэш пароля \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classClientDB_a3eed4b084e6a6558c89744d5b408d1ac}{db\+Mutex}}
+\begin{DoxyCompactList}\small\item\em Мьютекс для потокобезопасности (mutable для const методов) \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classClientDB_a2eee7ddf71b2ee25e220f34f34ca08c7}{filename}}
+\begin{DoxyCompactList}\small\item\em Имя файла базы данных \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для управления базой данных клиентов 
+
+Реализует хранение пар логин-\/хэш\+\_\+пароля в памяти с возможностью сохранения в файл и загрузки из него. Потокобезопасен за счет использования мьютекса. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classClientDB_a75d269b442d7cc3f4175a4f6b680062e}\label{classClientDB_a75d269b442d7cc3f4175a4f6b680062e}} 
+\index{ClientDB@{ClientDB}!ClientDB@{ClientDB}}
+\index{ClientDB@{ClientDB}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{ClientDB()}{ClientDB()}}
+{\footnotesize\ttfamily Client\+DB\+::\+Client\+DB (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \mbox{\hyperlink{classClientDB}{Client\+DB}}. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em filename} & Имя файла для хранения базы клиентов \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classClientDB_a54bbd229dbbfb24c247335fbae6b6fe6}\label{classClientDB_a54bbd229dbbfb24c247335fbae6b6fe6}} 
+\index{ClientDB@{ClientDB}!addClient@{addClient}}
+\index{addClient@{addClient}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{addClient()}{addClient()}}
+{\footnotesize\ttfamily bool Client\+DB\+::add\+Client (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{login,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Добавление нового клиента 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em login} & Логин нового клиента \\
+\hline
+\mbox{\texttt{ in}}  & {\em password} & Пароль нового клиента \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если клиент успешно добавлен, false в случае ошибки 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classClientDB_ae5262acfb23853560807a528d4047a30}\label{classClientDB_ae5262acfb23853560807a528d4047a30}} 
+\index{ClientDB@{ClientDB}!clientExists@{clientExists}}
+\index{clientExists@{clientExists}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{clientExists()}{clientExists()}}
+{\footnotesize\ttfamily bool Client\+DB\+::client\+Exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{login }\end{DoxyParamCaption}) const}
+
+
+
+Проверка существования клиента 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em login} & Логин клиента для проверки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если клиент существует, false в противном случае 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classClientDB_a866f65223c63949a8ad4f318967c1fe2}\label{classClientDB_a866f65223c63949a8ad4f318967c1fe2}} 
+\index{ClientDB@{ClientDB}!generateHash@{generateHash}}
+\index{generateHash@{generateHash}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{generateHash()}{generateHash()}}
+{\footnotesize\ttfamily std\+::string Client\+DB\+::generate\+Hash (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{salt,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Генерация хэша SHA-\/1 для проверки пароля 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em salt} & Соль для хэширования \\
+\hline
+\mbox{\texttt{ in}}  & {\em password} & Пароль для хэширования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Хэш SHA-\/1 в виде hex строки в верхнем регистре 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classClientDB_a1c985ae2f7889c8a5fbcf64ca664daa4}\label{classClientDB_a1c985ae2f7889c8a5fbcf64ca664daa4}} 
+\index{ClientDB@{ClientDB}!generateSalt@{generateSalt}}
+\index{generateSalt@{generateSalt}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{generateSalt()}{generateSalt()}}
+{\footnotesize\ttfamily std\+::string Client\+DB\+::generate\+Salt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Генерация случайной соли 
+
+\begin{DoxyReturn}{Возвращает}
+Случайная соль длиной 16 hex символов в верхнем регистре 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classClientDB_a7e0c6a14ef41113040989af250da2651}\label{classClientDB_a7e0c6a14ef41113040989af250da2651}} 
+\index{ClientDB@{ClientDB}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily bool Client\+DB\+::load\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Загрузка клиентов из файла 
+
+\begin{DoxyReturn}{Возвращает}
+true если файл успешно загружен, false в случае ошибки 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classClientDB_a42c145e87086102424ec3dc151c802cb}\label{classClientDB_a42c145e87086102424ec3dc151c802cb}} 
+\index{ClientDB@{ClientDB}!removeClient@{removeClient}}
+\index{removeClient@{removeClient}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{removeClient()}{removeClient()}}
+{\footnotesize\ttfamily bool Client\+DB\+::remove\+Client (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{login }\end{DoxyParamCaption})}
+
+
+
+Удаление клиента 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em login} & Логин клиента для удаления \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если клиент успешно удален, false если клиент не найден 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classClientDB_a9dd185bf41aabe29e6bec130a953148a}\label{classClientDB_a9dd185bf41aabe29e6bec130a953148a}} 
+\index{ClientDB@{ClientDB}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily bool Client\+DB\+::save\+To\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Сохранение клиентов в файл 
+
+\begin{DoxyReturn}{Возвращает}
+true если файл успешно сохранен, false в случае ошибки 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classClientDB_acdfd0697bca9d25360418a48ee5e64ff}\label{classClientDB_acdfd0697bca9d25360418a48ee5e64ff}} 
+\index{ClientDB@{ClientDB}!verifyPassword@{verifyPassword}}
+\index{verifyPassword@{verifyPassword}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{verifyPassword()}{verifyPassword()}}
+{\footnotesize\ttfamily bool Client\+DB\+::verify\+Password (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{login,  }\item[{const std\+::string \&}]{password\+Hash }\end{DoxyParamCaption}) const}
+
+
+
+Проверка хэша пароля клиента 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em login} & Логин клиента \\
+\hline
+\mbox{\texttt{ in}}  & {\em password\+Hash} & Хэш пароля для проверки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если хэш совпадает, false в противном случае 
+\end{DoxyReturn}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classClientDB_ae05cd410539e0a63e29c024337e0e010}\label{classClientDB_ae05cd410539e0a63e29c024337e0e010}} 
+\index{ClientDB@{ClientDB}!clients@{clients}}
+\index{clients@{clients}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{clients}{clients}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::string$>$ Client\+DB\+::clients\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Хранилище клиентов\+: логин -\/\texorpdfstring{$>$}{>} хэш пароля 
+
+\mbox{\Hypertarget{classClientDB_a3eed4b084e6a6558c89744d5b408d1ac}\label{classClientDB_a3eed4b084e6a6558c89744d5b408d1ac}} 
+\index{ClientDB@{ClientDB}!dbMutex@{dbMutex}}
+\index{dbMutex@{dbMutex}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{dbMutex}{dbMutex}}
+{\footnotesize\ttfamily std\+::mutex Client\+DB\+::db\+Mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+Мьютекс для потокобезопасности (mutable для const методов) 
+
+\mbox{\Hypertarget{classClientDB_a2eee7ddf71b2ee25e220f34f34ca08c7}\label{classClientDB_a2eee7ddf71b2ee25e220f34f34ca08c7}} 
+\index{ClientDB@{ClientDB}!filename@{filename}}
+\index{filename@{filename}!ClientDB@{ClientDB}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily std\+::string Client\+DB\+::filename\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Имя файла базы данных 
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{ClientDB_8h}{Client\+DB.\+h}}\item 
+src/\mbox{\hyperlink{ClientDB_8cpp}{Client\+DB.\+cpp}}\end{DoxyCompactItemize}

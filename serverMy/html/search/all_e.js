@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['salt_5fbits_0',['SALT_BITS',['../namespaceConfig.html#a11988f0481daf4180868fa75fb8ae9f1',1,'Config']]],
+  ['salt_5fhex_5flength_1',['SALT_HEX_LENGTH',['../namespaceConfig.html#a51096c5caa7cf4d10617ec85d7b61abb',1,'Config']]],
+  ['savetofile_2',['saveToFile',['../classClientDB.html#a9dd185bf41aabe29e6bec130a953148a',1,'ClientDB']]],
+  ['send_5frecv_5ftimeout_3',['SEND_RECV_TIMEOUT',['../classProtocol.html#ac7b544f05cf71e416169fccbfc4104f1',1,'Protocol']]],
+  ['sendall_4',['sendAll',['../classProtocol.html#a1383c76d6c950323b4a12967ba7fdc9e',1,'Protocol']]],
+  ['senderror_5',['sendError',['../classProtocol.html#a4202284089fac0cee1a1d85d7f43dbad',1,'Protocol']]],
+  ['sendok_6',['sendOk',['../classProtocol.html#a95a69029c2b16fe76888f6ade75a422e',1,'Protocol']]],
+  ['sendsalt_7',['sendSalt',['../classProtocol.html#a110db93280f9931c66f3930079afa10f',1,'Protocol']]],
+  ['sendvectorresults_8',['sendVectorResults',['../classProtocol.html#a1ff297a96d5fc00e8e54da5213b66d53',1,'Protocol']]],
+  ['server_9',['Server',['../classServer.html',1,'Server'],['../classServer.html#a375d630113a4c8342b42c1a550b34538',1,'Server::Server()']]],
+  ['server_10',['server',['../main_8cpp.html#af570b242d81a3a3bf252f54c3ca0054b',1,'main.cpp']]],
+  ['server_2ecpp_11',['Server.cpp',['../Server_8cpp.html',1,'']]],
+  ['server_2eh_12',['Server.h',['../Server_8h.html',1,'']]],
+  ['serversocket_13',['serverSocket',['../classServer.html#a0e1f90d176dd31898b84088e6f4c1d87',1,'Server']]],
+  ['signalhandler_14',['signalHandler',['../main_8cpp.html#ad2e59c7203b3bddc1bc9a2224b52e8e7',1,'main.cpp']]],
+  ['start_15',['start',['../classServer.html#a7eac07d2582fa01c2671362efa955b31',1,'Server']]],
+  ['stop_16',['stop',['../classServer.html#a07c45a7e101a3926d8f9685c3c5d14e4',1,'Server']]],
+  ['sums_17',['sums',['../structVectorProcessor_1_1VectorResult.html#abc04e50ae8af04236086df0e78799357',1,'VectorProcessor::VectorResult']]]
+];

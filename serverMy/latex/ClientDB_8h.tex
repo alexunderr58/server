@@ -1,0 +1,49 @@
+\hypertarget{ClientDB_8h}{}\doxysection{Файл include/\+Client\+DB.h}
+\label{ClientDB_8h}\index{include/ClientDB.h@{include/ClientDB.h}}
+
+
+Класс для работы с базой данных клиентов  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+Граф включаемых заголовочных файлов для Client\+DB.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ClientDB_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{ClientDB_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classClientDB}{Client\+DB}}
+\begin{DoxyCompactList}\small\item\em Класс для управления базой данных клиентов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для работы с базой данных клиентов 
+
+\begin{DoxyAuthor}{Автор}
+Alexander Melekhin 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Версия}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Дата}
+2024
+\end{DoxyDate}
+Обеспечивает хранение, загрузку, сохранение и проверку учетных данных клиентов. Использует SHA-\/1 для хэширования паролей. \begin{DoxyWarning}{Предупреждения}
+Потокобезопасный доступ к базе клиентов 
+\end{DoxyWarning}
